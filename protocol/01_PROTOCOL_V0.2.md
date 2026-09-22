@@ -19,6 +19,21 @@ The protocol supports a human working with AI from an ambiguous starting point t
 
 Implementation itself is a separate work mode.
 
+### Declared scope
+
+The protocol assumes one configuration:
+
+> **one human, one AI, single-threaded discovery, terminating in a handoff to a separate implementation context.**
+
+Everything in this protocol is written for that configuration and its evidence comes from it. Known untested extensions:
+
+- teams;
+- multiple stakeholders;
+- discovery inside an existing system;
+- continuous discovery→delivery.
+
+Evidence imported from multi-party settings is a transfer into this configuration and should be named as one, not read as direct support.
+
 ---
 
 ## 2. Governing principle
@@ -55,7 +70,7 @@ Human engagement should remain deliberate where the process depends on:
 
 > **AI may externalize tentative structure early, but a useful proposal must remain distinguishable from an accepted model commitment.**
 
-This principle applies across the discovery:
+This is the protocol's one tentativeness ladder. It applies across the discovery, with one typed instantiation per kind of object:
 
 ### Frames
 `possible frame → working frame → accepted frame for current horizon`
@@ -79,6 +94,12 @@ plausible abstraction
 ```
 
 Fluency is not commitment.
+
+One presentation rule governs every instantiation:
+
+> **Render status honestly: exploratory structure must not carry convergence rhetoric.**
+
+§6 is guidance on applying that rule; `02` §7 is the state encoding of the same ladder. Neither is a separate device.
 
 ---
 
@@ -165,6 +186,8 @@ AI may recommend and challenge. It must not silently commit on the human's behal
 
 ## 5. Discovery modes
 
+A mode names the **dominant learning objective of the moment**, never a phase. Problem and solution co-evolve (§7), so mode switches are expected many times in a session, and returning to an earlier mode is normal rather than a regression.
+
 ### `PROBLEM_EXPLORATION`
 
 Goal:
@@ -220,6 +243,8 @@ Do not silently convert recommendation into decision or working language into im
 ---
 
 ## 6. Structure for exploration vs structure for convergence
+
+*Guidance under §3's presentation rule, not a separate device.*
 
 AI structure is useful in two different ways.
 

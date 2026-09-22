@@ -183,5 +183,5 @@ Before an irreversible normalization, record what source-grounded information is
 ## What is deliberately absent
 
 - **Adaptive routing / the five-factor router.** Untested as a router, and there is no event that would show it fired. Adding a capability for it now would manufacture the appearance of a mechanism.
-- **Mode tracking.** The mode taxonomy is under an open change proposal (CP-02); building a capability on a taxonomy that may be renamed is premature.
+- **Mode tracking.** CP-02 was applied in v0.2.1 without renaming: a mode names the dominant learning objective of the moment, not a phase. Nothing in the catalogue depends on tracking it, so no capability is defined.
 - **Turn economics.** Depends entirely on whether `turn.recorded` is reachable. Phase 1 decides whether this is a capability or a demoted hypothesis.

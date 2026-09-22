@@ -28,9 +28,9 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP | Proposal | Disposition | Where |
 |---|---|---|---|
 | CP-01 | adversarial challenge as a convergence gate | **accepted** | drafted as `CAP-10`; protocol edit pending v0.2.1 |
-| CP-02 | remove problem/solution split from mode names | **deferred to v0.2.1** | phase 0 deliberately defines no mode capability, so nothing depends on the outcome |
+| CP-02 | remove problem/solution split from mode names | **done in v0.2.1** (option b: modes keep their names) | `protocol/01` §5, `02` §1 |
 | CP-03 | enumerated anchor-risk events instead of a self-judged trigger | **accepted** | drafted as `CAP-14`, whose L1 measurability depends on the list existing |
-| CP-04 | collapse the four tentativeness devices into one ladder | **deferred to v0.2.1** | editorial; no capability depends on it |
+| CP-04 | collapse the four tentativeness devices into one ladder | **done in v0.2.1** | `protocol/01` §3 (one ladder, one presentation rule), §6 demoted to guidance, `02` §7 named as its state encoding |
 | CP-05 | recorded-disagreement object | **accepted** | drafted as `CAP-06` |
 | CP-06 | define the commitment act | **accepted** | drafted as `CAP-04`, including the required payload |
 | CP-07 | reinstate disconfirming evidence in `research/` | **done** | `research/01` §2A + correction in §2, with an amendment note recording the change |
@@ -40,7 +40,7 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP-11 | Core/Extended split + one hypothesis register | **done** | Core/Extended in `phase0/capabilities/catalogue.md`; register in `proposals/CP-11-hypothesis-register.md`, `HYP-001..025` over five legacy ID spaces |
 | CP-12 | conformance definition + minimal trace | **executed as a draft** | `phase0/observation-model/` and `phase0/capabilities/CONFORMANCE.md` |
 | CP-13 | redesign evaluation for n=1 | **deferred to v0.2.1** | phase 0 supplies the trace it would need; the redesign itself is untouched |
-| CP-14 | declare the configuration assumption | **deferred to v0.2.1** | one paragraph in `protocol/01` §1 |
+| CP-14 | declare the configuration assumption | **done in v0.2.1** | `protocol/01` §1, "Declared scope" |
 | CP-15 | context-scope concept status; move turn economics to binding guidance | **deferred** | `CAP-11` inherits the unresolved context-scope question and says so |
 
 **All four outstanding accepted proposals are now done** (CP-07, CP-09, CP-10, CP-11). Five remain deferred to a v0.2.1 consolidation pass (CP-02, CP-04, CP-08, CP-13, CP-14), and executing CP-10 produced six new ones. *[Note added on publication: the table above defers six proposals, four of them to v0.2.1 (CP-02, CP-04, CP-13, CP-14) and two without a target version (CP-08, CP-15).]*
