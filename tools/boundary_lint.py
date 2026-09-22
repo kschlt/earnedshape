@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Draft boundary lint for the layer cut described in 10_PROJECT_SETUP §2.
+"""Draft boundary lint for the layer cut described in docs/overview.md.
 
-Doc 10 argues the protocol/adapter boundary should be enforced by a check over
+The project setup (working document 10, see docs/provenance.md) argues the protocol/adapter boundary should be enforced by a check over
 stable capability IDs rather than by a repository boundary. That argument was
 made without an implementation, which made it an assertion. This is the
 implementation, deliberately small and disposable.

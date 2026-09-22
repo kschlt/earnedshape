@@ -1,6 +1,6 @@
 # Evidence & Research Synthesis — v0.2
 
-> **Amendment note.** Section 2A and the correction inside §2 were added under change proposal **CP-07** (`09_ORIENTATION_AND_ADVERSARIAL_REVIEW_V0.2.md`), after a review found that this curated layer had dropped the disconfirming evidence present in `source-research/`, and had promoted one contested finding to "strongly supported". No other claim in this file was altered. The underlying sources are unchanged and, as §9 states, still unverified against primaries.
+> **Amendment note.** Section 2A and the correction inside §2 were added under change proposal **CP-07** of the [adversarial review](../docs/review/2026-09-adversarial-review-v0.2.md), after it found that this curated layer had dropped the disconfirming evidence present in the raw research reports (`source-research/`, unpublished; see [`docs/provenance.md`](../docs/provenance.md)), and had promoted one contested finding to "strongly supported". No other claim in this file was altered. The underlying sources are unchanged and, as §9 states, still unverified against primaries.
 
 ## 1. Evidence architecture
 
@@ -20,7 +20,7 @@ The current baseline is informed by:
 - Shared Conceptual Language, terminology formation & AI anchoring.
 
 ### Prior adjacent design work
-- Turn / Adaptive Cognitive Handoff for predominantly autonomous implementation agents.
+- Turn / Adaptive Cognitive Handoff for predominantly autonomous implementation agents — the author's earlier, unpublished design work ([`docs/provenance.md`](../docs/provenance.md)).
 
 None of these alone validates the full protocol.
 

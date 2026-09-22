@@ -1,7 +1,7 @@
 # Conformance Matrix
 
 > **Owns:** per surface, which capabilities are realized, by what mechanism, and whether their effect is observable.
-> **Status:** Honestly empty. Every `?` is a question for the Phase 1 feasibility spikes. A filled-in guess here would be the most expensive kind of wrong.
+> **Status:** Honestly empty. Every `?` is a question for the [Phase 1 feasibility spikes](../docs/phase-1-feasibility.md). A filled-in guess here would be the most expensive kind of wrong.
 
 ## How to read it
 

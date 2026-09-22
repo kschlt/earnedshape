@@ -22,6 +22,8 @@ A protocol that forces the two apart:
 - **Status changes only through a recorded transition.** Never through repetition, never through a polished restatement.
 - **The commitment act** — a commitment exists only with its rejected alternative, its rationale, and the condition under which it should be reopened. Anything else is a draft, however confident it sounds.
 - **Decision rights** — what the AI may do alone, what it may draft, what it may only advise on, and what stays with the human.
+- **Meaning before commitment** — a term the AI coins starts as a candidate. Fluent vocabulary is not shared understanding until it has been tested against cases.
+- **Challenge before convergence** — a model is not ready to commit to until it has survived a deliberate attempt to break it. (Accepted after review; the protocol text follows in v0.2.1.)
 
 The governing rule is inverted from most AI tooling: it optimises for the **next valuable human contribution**, not for the completeness of the AI's answer.
 
@@ -41,10 +43,28 @@ It assumes one human, one AI, and a discovery that ends in a handoff. Teams, mul
 | `capabilities/` | what an adapter would have to do, and how each capability is evaluated |
 | `research/` | the synthesis, including a standing section for evidence **against** the premise |
 | `tools/` | the lint that keeps the protocol layer vendor-free |
+| `examples/` | one real commitment and one overruled challenge, recorded in the protocol's shape |
+| `docs/review/` | the adversarial review of v0.2 and what happened to each of its findings |
 
 No adapter. No instrumented run. The conformance matrix — which capability is realisable where — is empty because filling it with guesses would be worse than leaving it blank.
 
 Start with [`docs/overview.md`](docs/overview.md).
+
+## Using it today
+
+There is nothing to install. What you can do now:
+
+- **Use the protocol as a checklist** against your own AI-assisted discovery: does every commitment have a rejected alternative and a revisit condition, did the AI's vocabulary become yours without anyone deciding it?
+- **Read [`examples/naming-decision.md`](examples/naming-decision.md)** to see the two central records on a real decision.
+- **Attack it.** Open an issue with a contradiction, an unfalsifiable rule, or a discovery where this would have cost more than it returned.
+
+## How it was developed
+
+Two discoveries done with an AI, each analysed afterwards as an evidence case; four focused literature reviews; a protocol revised once on their basis; an [adversarial review](docs/review/2026-09-adversarial-review-v0.2.md) of that revision with 25 findings and 15 change proposals, each [dispositioned](docs/review/disposition.md); then an observation model and a capability catalogue so that the protocol's claims can be measured at all. [`docs/provenance.md`](docs/provenance.md) has the timeline and says what is still private and why.
+
+## What's next
+
+Phase 1 finds out what can actually be observed before anything steers: first, whether a conversational turn can be recorded automatically in Claude Code, then state across sessions, skipped capabilities and the cost of enforcement. The instrument for the first question is built; the run is pending. See [`docs/phase-1-feasibility.md`](docs/phase-1-feasibility.md).
 
 ## What the evidence actually says
 

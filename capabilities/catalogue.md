@@ -2,6 +2,7 @@
 
 > **Owns:** the capabilities derived from the protocol, what each requires, what each must emit, and how each is evaluated on both levels.
 > **Status:** Draft. The Core/Extended split is the proposal from change proposal CP-11 and is not yet an accepted protocol decision.
+> **References:** change proposals (`CP-nn`) and their current status are in [`docs/review/disposition.md`](../docs/review/disposition.md); review findings (`F-nn`) in [`docs/review/`](../docs/review/2026-09-adversarial-review-v0.2.md); the Case 01 and Case 02 codes point into unpublished retrospectives and are explained in [`docs/provenance.md`](../docs/provenance.md). Phase 1 is described in [`docs/phase-1-feasibility.md`](../docs/phase-1-feasibility.md).
 > **Vendor-free by construction:** no entry names a harness, a hook, a skill or a file format. `initial_form` is `?` everywhere until the Phase 1 spikes report what is reachable.
 
 ## How to read an entry
@@ -164,7 +165,7 @@
 **eval L1** Influential precedents used with no record.
 **eval L2** Whether a recorded non-transferable assumption is later caught being imported anyway.
 **falsified by** Records are produced and no import error is ever caught by one.
-**note** The protocol does not currently apply this to its own imports (finding F-18). The capability should be exercised on those four first — the cheapest possible test, on material already at hand.
+**note** The protocol does not currently apply this to its own imports (finding F-18). The capability should be exercised on those four first — the cheapest possible test, on material already at hand. Done by hand as change proposal CP-09: [`research/analogy-records.md`](../research/analogy-records.md) — each of the four records produced a finding, none of them cosmetic.
 
 ---
 
