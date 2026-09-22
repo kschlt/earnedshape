@@ -1,6 +1,6 @@
 # Evidence & Research Synthesis — v0.2
 
-> **Amendment note.** Section 2A and the correction inside §2 were added under change proposal **CP-07** of the [adversarial review](../docs/review/2026-09-adversarial-review-v0.2.md), after it found that this curated layer had dropped the disconfirming evidence present in the raw research reports (`source-research/`, unpublished; see [`docs/provenance.md`](../docs/provenance.md)), and had promoted one contested finding to "strongly supported". No other claim in this file was altered. The sources were verified against primaries in September 2026; see §9.
+> **Amendment note.** Section 2A and the correction inside §2 were added under change proposal **CP-07** of the [adversarial review](../docs/review/2026-09-adversarial-review-v0.2.md), after it found that this curated layer had dropped the disconfirming evidence present in the raw research reports (`source-research/`, unpublished; see [`docs/provenance.md`](../docs/provenance.md)), and had promoted one contested finding to "strongly supported". No other claim in this file was altered. In September 2026 the sources were checked against publisher and index records; see [`REFERENCES.md`](REFERENCES.md) and §9.
 
 ## 1. Evidence architecture
 

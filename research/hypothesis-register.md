@@ -45,7 +45,7 @@ The `evidence` column is the honest one: it says what the claim actually rests o
 | HYP-024 | An in-session halt heuristic prevents unproductive continuation | hypothesis | **dropped from v0.2** | SC-3, AP-09 | — | yes — CP-17 |
 | HYP-025 | Recorded dissent predicts later reopenings | hypothesis | new, from CP-05 | — | CAP-06 | yes — the one predictive test available at n=1 |
 
-Open **questions** (`P-01..P-14`, `E-01..E-08`) and deferred **technical decisions** (`T-01..T-13`) keep their existing IDs and are not folded in: they are not claims, and merging them would recreate the confusion this register removes. `07` should link here rather than restate.
+Open **questions** (`P-01..P-14`, `E-01..E-08`) and deferred **technical decisions** (`T-01..T-13`: `T-01..T-10` in `protocol/07`, `T-11..T-13` proposed in the adversarial review) keep their existing IDs and are not folded in: they are not claims, and merging them would recreate the confusion this register removes. `07` should link here rather than restate.
 
 ## Three findings from building it
 

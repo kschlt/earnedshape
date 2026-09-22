@@ -1,6 +1,6 @@
 # Status Ledger & Change-Proposal Disposition
 
-> **Published record.** The status ledger kept in the private working repository after the [adversarial review](2026-09-adversarial-review-v0.2.md), reproduced as it stood when this repository was derived (14 September 2026). It records what happened to every finding and change proposal of that review, which is the part an outside reader cannot otherwise check.
+> **Published record.** The status ledger kept in the private working repository after the [adversarial review](2026-09-adversarial-review-v0.2.md), reproduced as it stood when this repository was derived (14 September 2026). It records what happened to each of the review's change proposals and to the findings they address, which is the part an outside reader cannot otherwise check. Six findings have no change proposal of their own and are not tracked in the ledger: F-04, F-06, F-12, F-15, F-20 and F-24. Of these, F-12 (no citation independently verified) has since been addressed by [`research/REFERENCES.md`](../../research/REFERENCES.md); the other five have no recorded disposition.
 > Paths are those of the working repository: `phase0/observation-model/` is now [`protocol/observation-model/`](../../protocol/observation-model/), `phase0/capabilities/` is now [`capabilities/`](../../capabilities/), and `proposals/CP-09…` / `proposals/CP-11…` are now [`research/analogy-records.md`](../../research/analogy-records.md) and [`research/hypothesis-register.md`](../../research/hypothesis-register.md). Numbered documents (`09`–`15`) are working documents of that repository; [`docs/provenance.md`](../provenance.md) says what each is. This is the public index of change proposals `CP-01`–`CP-21`; the current state of each is kept here from now on.
 
 > **Status:** Live index for this branch. Update it when a document's standing changes.
@@ -43,7 +43,7 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP-14 | declare the configuration assumption | **deferred to v0.2.1** | one paragraph in `protocol/01` §1 |
 | CP-15 | context-scope concept status; move turn economics to binding guidance | **deferred** | `CAP-11` inherits the unresolved context-scope question and says so |
 
-**All four outstanding accepted proposals are now done** (CP-07, CP-09, CP-10, CP-11). Five remain deferred to a v0.2.1 consolidation pass (CP-02, CP-04, CP-08, CP-13, CP-14), and executing CP-10 produced six new ones.
+**All four outstanding accepted proposals are now done** (CP-07, CP-09, CP-10, CP-11). Five remain deferred to a v0.2.1 consolidation pass (CP-02, CP-04, CP-08, CP-13, CP-14), and executing CP-10 produced six new ones. *[Note added on publication: the table above defers six proposals, four of them to v0.2.1 (CP-02, CP-04, CP-13, CP-14) and two without a target version (CP-08, CP-15).]*
 
 ### New proposals from CP-10
 

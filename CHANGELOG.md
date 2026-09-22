@@ -4,7 +4,7 @@ Protocol versions are recorded here with the changed rule, the observation that 
 
 ## Unreleased
 
-- Research references verified against primary sources; review record, change-proposal disposition, hypothesis register and analogy records published (see `docs/review/`, `research/`).
+- Research references checked against publisher and index records, with unconfirmed fields marked; review record, change-proposal disposition, hypothesis register and analogy records published (see `docs/review/`, `research/`).
 
 ---
 

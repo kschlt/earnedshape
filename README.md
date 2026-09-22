@@ -60,7 +60,7 @@ There is nothing to install. What you can do now:
 
 ## How it was developed
 
-Two discoveries done with an AI, each analysed afterwards as an evidence case; four focused literature reviews; a protocol revised once on their basis; an [adversarial review](docs/review/2026-09-adversarial-review-v0.2.md) of that revision with 25 findings and 15 change proposals, each [dispositioned](docs/review/disposition.md); then an observation model and a capability catalogue so that the protocol's claims can be measured at all. [`docs/provenance.md`](docs/provenance.md) has the timeline and says what is still private and why.
+Two discoveries done with an AI, each analysed afterwards as an evidence case; four focused research reports; a protocol revised once on their basis; an [adversarial review](docs/review/2026-09-adversarial-review-v0.2.md) of that revision with 25 findings and 15 change proposals, each proposal [dispositioned](docs/review/disposition.md); then an observation model and a capability catalogue so that the protocol's claims can be measured at all. [`docs/provenance.md`](docs/provenance.md) has the timeline and says what is still private and why.
 
 ## What's next
 

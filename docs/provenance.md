@@ -8,7 +8,7 @@ This repository was derived on 14 September 2026 from a private working reposito
 |---|---|---|
 | before Sep 2026 | **Case 01** — a long product discovery with an AI (the recipe tool [Cookframe](https://github.com/kschlt/cookframe)), analysed retrospectively afterwards | no — see below |
 | up to 5 Sep 2026 | **Case 02** — a second discovery whose subject was human–AI discovery itself, using Case 01's retrospective as input. It produced protocol v0.1 | no |
-| | Four focused research reports: human contribution and interaction design; problem framing, solution probes and fixation; evaluating a discovery protocol; shared conceptual language | as a synthesis in [`research/`](../research/), with verified sources in [`research/REFERENCES.md`](../research/REFERENCES.md) |
+| | Four focused research reports: human contribution and interaction design; problem framing, solution probes and fixation; evaluating a discovery protocol; shared conceptual language | as a synthesis in [`research/`](../research/), with checked sources in [`research/REFERENCES.md`](../research/REFERENCES.md) |
 | 5 Sep 2026 | **Protocol v0.2**, after a post-hoc shared-language addendum to Case 02 | [`protocol/`](../protocol/), [`CHANGELOG.md`](../CHANGELOG.md) |
 | 10 Sep 2026 | Orientation and **adversarial review** of v0.2: 25 findings, 15 change proposals | [`docs/review/`](review/) |
 | 10–14 Sep 2026 | **Phase 0**: observation model, capability catalogue, conformance matrix, boundary lint; four change proposals executed | [`protocol/observation-model/`](../protocol/observation-model/), [`capabilities/`](../capabilities/), [`research/hypothesis-register.md`](../research/hypothesis-register.md), [`research/analogy-records.md`](../research/analogy-records.md) |
