@@ -1,5 +1,7 @@
 # Fidelity Levels
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 > **Owns:** how well a run was observed, and which comparisons that permits.
 
 Two surfaces will not be equally observable. Recording that difference is what keeps the evidence honest; ignoring it produces confident conclusions from incomparable data.

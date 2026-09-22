@@ -1,5 +1,7 @@
 # Decision Rights & Adaptive Autonomy v0.2
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 ## 1. Principle
 
 > **Initiative is a property of the next move, not a permanent role.**

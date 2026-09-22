@@ -1,5 +1,7 @@
 # Human–AI Discovery Protocol v0.2
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 ## 1. Objective
 
 The protocol supports a human working with AI from an ambiguous starting point toward:
