@@ -9,4 +9,4 @@ This repository is public-facing. Everything committed here, including commit me
 - Keep `protocol/` vendor-free. `python3 tools/boundary_lint.py .` enforces the layer cut and is the CI gate; run it before every commit.
 - Nothing private enters this repository: no personal or critical content, no employer or client names, no content from discovery runs. The author's own projects may be named with a one-line description (see `docs/provenance.md`).
 - Spike code stays in the private working repository. This repository records spike questions, status and results (`docs/phase-1-feasibility.md`, `capabilities/CONFORMANCE.md`).
-- Research claims cite an entry in `research/REFERENCES.md`. A field that could not be checked stays marked as unchecked.
+- Research claims cite an entry in `research/REFERENCES.md`. A field that could not be checked stays marked "not confirmed", with the reason.
