@@ -4,8 +4,9 @@
 This repository is public, and so is every commit in it: file contents,
 author and committer identities, and commit messages. A private address
 that lands in a pushed commit stays retrievable even after a rewrite, so
-the check has to run before the push, and CI repeats it for everything
-that reaches GitHub.
+the check has to run before the push, and CI repeats it for every commit
+that reaches GitHub. Pull request titles, bodies and comments are outside
+its reach and need the same care by hand.
 
 Four rules:
   P1  no email address in a tracked file, unless allowlisted
@@ -25,7 +26,8 @@ line, matched case-insensitively as a whole word; a line starting with
 `re:` is a regular expression; `#` starts a comment.
 
 Findings are printed with the matched text masked, because CI logs of a
-public repository are public too.
+public repository are public too. `--self-test` runs the rules against
+built-in samples, so CI shows the guard still catches what it should.
 
 Usage:  python3 tools/public_guard.py [repo_root] [--commits REV]
                                      [--message-file PATH] [--deny-file PATH]
@@ -34,7 +36,8 @@ Usage:  python3 tools/public_guard.py [repo_root] [--commits REV]
         --message-file PATH  check a commit message about to be written and
                              the current author and committer identity
                              (for a commit message hook)
-Exit:   0 clean, 1 violations found, 2 usage error.
+        python3 tools/public_guard.py --self-test
+Exit:   0 clean, 1 violations found, 2 usage or git error.
 """
 import re
 import subprocess
@@ -42,7 +45,8 @@ import sys
 from pathlib import Path
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}")
-ALLOWED_ADDRESSES = {"noreply@github.com", "noreply@anthropic.com"}
+ALLOWED_ADDRESSES = {"noreply@github.com", "noreply@anthropic.com",
+                     "git@github.com"}   # the SSH clone host, not a mailbox
 ALLOWED_SUFFIXES = (
     "@users.noreply.github.com",
     "@example.com", "@example.org", "@example.net",
@@ -50,9 +54,14 @@ ALLOWED_SUFFIXES = (
 )
 
 
+# `name@2x.png` is an asset name, not an address.
+FILE_SUFFIXES = (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".pdf")
+
+
 def allowed(email: str) -> bool:
     e = email.lower()
-    return e in ALLOWED_ADDRESSES or e.endswith(ALLOWED_SUFFIXES)
+    return (e in ALLOWED_ADDRESSES or e.endswith(ALLOWED_SUFFIXES)
+            or e.endswith(FILE_SUFFIXES))
 
 
 def mask(text: str) -> str:
@@ -139,6 +148,34 @@ def rule_message_file(root: Path, path: Path, deny):
     return out
 
 
+def self_test():
+    """Each rule must still fire on a known-bad sample and stay quiet on a good one.
+
+    The bad samples are assembled at run time, so this file itself stays clean.
+    """
+    at = "@"
+    deny = [re.compile(r"\bcanary-term\b", re.I)]
+    where = lambda n: f"sample:{n}"
+    cases = [
+        ("P1 fires", list(scan_text(f"mail jane.doe{at}mail.test.de", where, [], "P1")), 1),
+        ("P1 allowlist", list(scan_text(f"a{at}example.com 1+u{at}users.noreply.github.com "
+                                        f"git{at}github.com:o/r.git icon{at}2x.png",
+                                        where, [], "P1")), 0),
+        ("P2 fires", check_identity("c", "author", "x", f"me{at}private.test.de", []), 1),
+        ("P2 noreply", check_identity("c", "author", "x", f"noreply{at}github.com", []), 0),
+        ("P3 fires", list(scan_text(f"reach me: x{at}corp.io", where, [], "P3")), 1),
+        ("P4 fires", list(scan_text("a Canary-Term here", where, deny, "P3")), 1),
+        ("P4 whole word", list(scan_text("canary-terms", where, deny, "P3")), 0),
+    ]
+    failed = [name for name, got, want in cases if len(got) != want]
+    if mask(f"secret{at}x.io") != "s*********o":
+        failed.append("mask hides the middle")
+    for name in failed:
+        print(f"SELF-TEST FAILED  {name}")
+    print(f"self-test: {len(failed)} of {len(cases) + 1} checks failed.")
+    return 1 if failed else 0
+
+
 def parse_args(argv):
     opts, rest = {}, []
     it = iter(argv)
@@ -158,6 +195,8 @@ def parse_args(argv):
 
 
 def main():
+    if sys.argv[1:] == ["--self-test"]:
+        return self_test()
     try:
         root, opts = parse_args(sys.argv[1:])
         deny = []
@@ -169,11 +208,21 @@ def main():
     except (SystemExit, re.error) as e:
         print(f"usage error: {e}", file=sys.stderr)
         return 2
-    findings = rule_tracked_files(root, deny)
-    if "--commits" in opts:
-        findings += rule_commits(root, opts["--commits"], deny)
-    if "--message-file" in opts:
-        findings += rule_message_file(root, Path(opts["--message-file"]), deny)
+    try:
+        findings = rule_tracked_files(root, deny)
+        if "--commits" in opts:
+            findings += rule_commits(root, opts["--commits"], deny)
+        if "--message-file" in opts:
+            findings += rule_message_file(root, Path(opts["--message-file"]), deny)
+    except subprocess.CalledProcessError as e:
+        err = e.stderr.decode("utf-8", "replace").strip().splitlines()
+        print(f"git error: git {' '.join(e.cmd[3:4])} failed"
+              f"{': ' + err[0] if err else ''}", file=sys.stderr)
+        return 2
+    except OSError as e:
+        print(f"usage error: {e.strerror}: {Path(e.filename).name if e.filename else ''}",
+              file=sys.stderr)
+        return 2
     for where, what in findings:
         print(f"FOUND    {where}: {what}")
     scope = "tracked files" + (f", commits {opts['--commits']}" if "--commits" in opts else "")
