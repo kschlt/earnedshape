@@ -44,7 +44,7 @@ It assumes one human, one AI, and a discovery that ends in a handoff. Teams, mul
 | `research/` | the synthesis, including a standing section for evidence **against** the premise |
 | `tools/` | the lint that keeps the protocol layer vendor-free |
 | `examples/` | one real commitment and one overruled challenge, recorded in the protocol's shape |
-| `docs/review/` | the adversarial review of v0.2 and what happened to each of its findings |
+| `docs/review/` | the adversarial review of v0.2 and what happened to each of its change proposals |
 
 No adapter. No instrumented run. The conformance matrix — which capability is realisable where — is empty because filling it with guesses would be worse than leaving it blank.
 

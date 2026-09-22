@@ -20,7 +20,7 @@ Cases 01 and 02 and the v0.1/v0.2 baseline were produced with ChatGPT-family mod
 ## What stays private, and why
 
 - **The evidence cases** (Case 01, about 2,300 lines in German; Case 02 and its addendum). They are raw retrospectives and need editing for self-containedness and non-circular evidence logic before release. The synthesis in `research/` states that they are unpublished and that this limits what a reader can verify.
-- **The raw research reports** (in German). They were produced with a deep-research tool and carry that tool's internal citation markers. The claims this repository relies on have been checked against the primary sources instead; see `research/REFERENCES.md`.
+- **The raw research reports** (in German). They were produced with a deep-research tool and carry that tool's internal citation markers. The claims this repository relies on have been checked against publisher and index records instead; see `research/REFERENCES.md`.
 - **Project-level working documents** about repository setup, naming and how this project relates to the author's other projects.
 
 ## The numbered working documents

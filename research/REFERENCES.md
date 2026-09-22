@@ -71,7 +71,7 @@ The synthesis was first written from four unpublished research reports produced 
 |---|---|---|---|
 | research/01 | §2 Human–AI collaboration is not automatically synergistic | Vaccaro2024; Bansal2021 | |
 | research/01 | §2 Human situated input remains epistemically special / evidence, not infallible truth | Ferrari2016; Ferrari2022 | These support "co-constructed, not simply read off" and tacit knowledge. "Epistemically special" is an inference (see below). |
-| research/01 | §2 AI valuable for articulation, search, synthesis, critique | Mircea2026; Noy2023 (optional: Dhillon2024) | Articulation and drafting are supported; synthesis rests on one preprint; search and critique are not covered (see below). |
+| research/01 | §2 AI valuable for articulation, search, synthesis, critique | Mircea2026; Noy2023 (optional: Dhillon2024) | Articulation and drafting are supported; synthesis rests on one preprint (SalgadoNeto2026, not cited in the synthesis); search and critique are not covered (see below). |
 | research/01 | §2 Early AI output can influence exploration/agency; timing matters | Qin2025; Wadinambiarachchi2024 (optional: Doshi2024, deRooij2026) | |
 | research/01 | §2 Problem and solution can co-evolve | DorstCross2001 | |
 | research/01 | §2 Shared terminology reduces coordination cost; lexical ≠ conceptual agreement | BrennanClark1996; PickeringGarrod2004; GlinzFricker2015 | Lab referential tasks plus a conceptual essay; no measurement in discovery settings. |
@@ -113,7 +113,7 @@ The citation check found claims in `research/01` §2 — the section headed "str
 | Claim | What the sources actually support |
 |---|---|
 | 01 §2 *Language and model can co-evolve* | Practitioner method literature only (Evans 2003). No empirical study. |
-| 01 §2 *AI can be highly valuable for articulation, search, synthesis and critique* | Articulation and drafting (one requirements study; Noy & Zhang 2023). Nothing in the evidence covers search or critique; synthesis rests on one preprint. |
+| 01 §2 *AI can be highly valuable for articulation, search, synthesis and critique* | Articulation and drafting (one requirements study; Noy & Zhang 2023). Nothing in the evidence covers search or critique; synthesis rests on one preprint ([SalgadoNeto2026](#salgadoneto2026)), which the synthesis does not cite. |
 | 01 §2 *Human situated input remains epistemically special* | Requirements are co-constructed and partly tacit (Ferrari et al.). "Epistemically special" is the project's normative reading, not a finding. |
 | 01 §2 *Shared terminology reduces coordination cost* | Shown in laboratory referential tasks (Brennan & Clark 1996). Not measured in discovery or software work. |
 | 01 §2 *Selective cognitive engagement matters* | Buçinca et al. tested cognitive forcing, not selective forcing. "Selective" is inference. |
