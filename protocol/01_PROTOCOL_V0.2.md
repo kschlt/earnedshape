@@ -414,11 +414,38 @@ Convergence is justified when:
 - critical assumptions were tested or explicitly accepted;
 - high-impact terminology has enough shared meaning for current decisions;
 - further exploration has diminishing expected information value;
-- uncertainty remains visible.
+- uncertainty remains visible;
+- the current model has survived at least one deliberate attempt to break it, by a party or context independent of the pair that built it.
 
 A useful sequence:
 
 `compare → expose uncertainty → challenge → decide → commit`
+
+### Review typology
+
+Four kinds of review, each answering a different question:
+
+- **exploration review** — what perspective is missing?
+- **adversarial review** — where does the model break?
+- **verification review** — are the named blockers actually closed?
+- **spike** — how does the external world actually behave?
+
+The challenge condition above is an adversarial review. §15 is the release instance of the same mechanism, not a separate one.
+
+### When to review
+
+Run the adversarial review when the model is **coherent, concrete enough to attack, and still cheap to change**. Waiting until release is later, easier to skip, and makes every finding more expensive. Whether this timing actually beats a pre-release review is an open question (`07` P-15).
+
+### Closing the review loop
+
+A review is not finished when its findings are written down. The return leg:
+
+1. fix only the named blockers;
+2. record a resolution log: each blocker, what was done, or why it stays open;
+3. run a narrow **verification review** that checks those blockers and nothing else;
+4. end with a verdict: **ready** or **not ready**.
+
+The verification pass must not reopen the product. A second review that brainstorms new directions is a new exploration, and should be named as one.
 
 ---
 
@@ -444,6 +471,8 @@ Readiness means:
 ---
 
 ## 15. Whole-baseline review before stable/public release
+
+This is the release instance of the adversarial review in §13; the review typology, timing rule and return leg there apply here too.
 
 Before treating a protocol/discovery baseline as stable for public release:
 

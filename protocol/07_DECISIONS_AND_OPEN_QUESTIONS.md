@@ -121,6 +121,9 @@ What should count as sufficient shared meaning?
 ### P-14 — Intentional ambiguity
 When should a concept remain explicitly unresolved?
 
+### P-15 — Review timing
+Does an adversarial review triggered when the model is coherent, concrete enough to attack and still cheap to change catch more material problems, at lower cost, than one run before release? Reinstated in v0.2.1 (CP-20) after it was dropped when v0.2 moved the trigger to release.
+
 ---
 
 ## D. Evaluation questions

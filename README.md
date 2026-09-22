@@ -23,7 +23,7 @@ A protocol that forces the two apart:
 - **The commitment act** — a commitment exists only with its rejected alternative, its rationale, and the condition under which it should be reopened. Anything else is a draft, however confident it sounds.
 - **Decision rights** — what the AI may do alone, what it may draft, what it may only advise on, and what stays with the human.
 - **Meaning before commitment** — a term the AI coins starts as a candidate. Fluent vocabulary is not shared understanding until it has been tested against cases.
-- **Challenge before convergence** — a model is not ready to commit to until it has survived a deliberate attempt to break it. (Accepted after review; the protocol text follows in v0.2.1.)
+- **Challenge before convergence** — a model is not ready to commit to until it has survived a deliberate attempt to break it.
 
 The governing rule is inverted from most AI tooling: it optimises for the **next valuable human contribution**, not for the completeness of the AI's answer.
 

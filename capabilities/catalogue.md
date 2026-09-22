@@ -99,7 +99,7 @@
 
 ### CAP-10 · Adversarial challenge before convergence
 **class** enforcement · **depends on** CAP-06
-**derives from** change proposal CP-01; Case 01 Phase 9, G6, L4, M-03; Case 02 E-02-20
+**derives from** change proposals CP-01, CP-16, CP-20; protocol §13; Case 01 Phase 9, G6, L4, M-03; Case 02 E-02-20
 **required** Before a high-impact commitment, the current model has survived one deliberate attempt to break it, by a party or context independent of the pair that built it. Findings are recorded as challenges; a narrow verification pass confirms the named blockers are closed.
 **must emit** `adversarial_review.completed`, plus `challenge.raised` per finding
 **eval L1** Commitments made with no preceding review event; reviews with no recorded findings (a review that finds nothing is usually a review that did not happen).

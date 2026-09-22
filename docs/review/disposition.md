@@ -27,7 +27,7 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 
 | CP | Proposal | Disposition | Where |
 |---|---|---|---|
-| CP-01 | adversarial challenge as a convergence gate | **accepted** | drafted as `CAP-10`; protocol edit pending v0.2.1 |
+| CP-01 | adversarial challenge as a convergence gate | **accepted**; **done in v0.2.1** | drafted as `CAP-10`; protocol text in `protocol/01` §13 (challenge condition, review typology) and §15 |
 | CP-02 | remove problem/solution split from mode names | **done in v0.2.1** (option b: modes keep their names) | `protocol/01` §5, `02` §1 |
 | CP-03 | enumerated anchor-risk events instead of a self-judged trigger | **accepted** | drafted as `CAP-14`, whose L1 measurability depends on the list existing |
 | CP-04 | collapse the four tentativeness devices into one ladder | **done in v0.2.1** | `protocol/01` §3 (one ladder, one presentation rule), §6 demoted to guidance, `02` §7 named as its state encoding |
@@ -47,14 +47,14 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 
 ### New proposals from CP-10
 
-| CP | Proposal | Priority |
-|---|---|---|
-| CP-16 | close the review loop: repair leg, resolution log, scoped re-review | high |
-| CP-17 | an in-session stop heuristic | high |
-| CP-18 | information-loss gate, generalized beyond terminology | high |
-| CP-19 | reuse gate before architecture | medium |
-| CP-20 | review timing on cost-of-change; reinstate the dropped open question | medium |
-| CP-21 | classify counterexamples local vs structural; define saturation | medium |
+| CP | Proposal | Priority | Disposition | Where |
+|---|---|---|---|---|
+| CP-16 | close the review loop: repair leg, resolution log, scoped re-review | high | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §13, "Closing the review loop" |
+| CP-17 | an in-session stop heuristic | high | **accepted** 2026-09-22 (owner) | — |
+| CP-18 | information-loss gate, generalized beyond terminology | high | **accepted** 2026-09-22 (owner) | — |
+| CP-19 | reuse gate before architecture | medium | **accepted** 2026-09-22 (owner) | — |
+| CP-20 | review timing on cost-of-change; reinstate the dropped open question | medium | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §13, "When to review"; open question reinstated as `07` P-15 |
+| CP-21 | classify counterexamples local vs structural; define saturation | medium | **accepted** 2026-09-22 (owner) | — |
 
 None applied. CP-18 would add `CAP-16` to the catalogue.
 
