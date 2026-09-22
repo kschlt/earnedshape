@@ -1,3 +1,13 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Claude Code wiring: a local symlink into the aos machinery (.aos/sys/.claude), never tracked
+.claude
+
+# aos:begin id=host-ignore rev=2 managed by aos touchpoint writer - do not edit by hand
+# The instance — its own nested state repo (D11), always host-ignored. Deliberately
+# NO trailing slash: a trailing-slash pattern matches only real directories, never a
+# symlink, and an ephemeral host may mount .aos as a symlink to a sibling clone.
+.aos
+# aos:end id=host-ignore
