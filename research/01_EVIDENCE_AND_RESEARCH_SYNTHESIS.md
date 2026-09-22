@@ -39,7 +39,7 @@ Task allocation and interaction design matter.
 But human experience is evidence, not infallible truth.
 
 ### AI can be highly valuable for articulation, search, synthesis and critique
-*Sources:* [StakeholderLLM2026](REFERENCES.md#stakeholderllm2026), [Noy2023](REFERENCES.md#noy2023) — articulation and drafting only; see [REFERENCES.md](REFERENCES.md#where-the-support-is-thinner-than-the-wording).
+*Sources:* [Mircea2026](REFERENCES.md#mircea2026), [Noy2023](REFERENCES.md#noy2023) — articulation and drafting only; see [REFERENCES.md](REFERENCES.md#where-the-support-is-thinner-than-the-wording).
 
 The correct response to AI anchoring risk is not "AI stays silent".
 
