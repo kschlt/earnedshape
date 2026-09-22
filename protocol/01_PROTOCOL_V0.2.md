@@ -99,7 +99,7 @@ One presentation rule governs every instantiation:
 
 > **Render status honestly: exploratory structure must not carry convergence rhetoric.**
 
-§6 is guidance on applying that rule; `02` §7 is the state encoding of the same ladder. Neither is a separate device.
+§6 is guidance on applying that rule; the decision/commitment and shared-language dimensions of `02` §7 are the state encoding of the same ladder. Neither is a separate device.
 
 ---
 
@@ -186,7 +186,7 @@ AI may recommend and challenge. It must not silently commit on the human's behal
 
 ## 5. Discovery modes
 
-A mode names the **dominant learning objective of the moment**, never a phase. Problem and solution co-evolve (§7), so mode switches are expected many times in a session, and returning to an earlier mode is normal rather than a regression.
+A mode names the **dominant learning objective of the moment**, never a phase. Problem and solution co-evolve (§7), so mode switches are expected many times in a session.
 
 ### `PROBLEM_EXPLORATION`
 
@@ -349,8 +349,6 @@ Preserving source expressions (`04` §4) is one instance of a general rule. When
 - what is being discarded;
 - what it would cost to reconstruct it later.
 
-If the reconstruction cost is high and the information may still matter, keep a reference to the source instead of discarding it.
-
 ---
 
 ## 10. Research behavior
@@ -426,7 +424,7 @@ Classify every counterexample when it arrives:
 - **local** — the model survives with a bounded fix;
 - **structural** — the model's frame, boundaries or core concepts have to change.
 
-Counterexample work is **saturated** when new counterexamples cause mostly local changes. Saturation is evidence for convergence (§13); a structural counterexample after apparent saturation reopens it.
+Counterexample work is **saturated** when new counterexamples cause mostly local changes.
 
 ---
 
@@ -460,7 +458,7 @@ The challenge condition above is an adversarial review. §15 is the release inst
 
 ### When to review
 
-Run the adversarial review when the model is **coherent, concrete enough to attack, and still cheap to change**. Waiting until release is later, easier to skip, and makes every finding more expensive. Whether this timing actually beats a pre-release review is an open question (`07` P-15).
+Run the adversarial review when the model is **coherent, concrete enough to attack, and still cheap to change**. Waiting until release is later, easier to skip, and makes every finding more expensive. Whether this timing actually beats a pre-release review is an open question (`07` P-15, `HYP-019`).
 
 ### Closing the review loop
 
@@ -483,7 +481,7 @@ A discovery can keep running while producing nothing. Check for these symptoms d
 - artifacts are re-sorted rather than changed;
 - no new evidence and no new decisions appear.
 
-When they dominate, stop and decide: converge (this section), hand off with the open points deferred (§14), or name the specific uncertainty that justifies continuing. `05` §3's No-New-Evidence Reopenings measures the same failure after the fact, which is too late to act on.
+When they dominate, stop. `05` §3's No-New-Evidence Reopenings measures the same failure after the fact, which is too late to act on.
 
 ---
 
@@ -510,7 +508,7 @@ Readiness means:
 
 ## 15. Whole-baseline review before stable/public release
 
-This is the release instance of the adversarial review in §13; the review typology, timing rule and return leg there apply here too.
+This is the release instance of the adversarial review in §13. The review typology and the return leg there apply here too; this review does not replace the earlier one §13 requires.
 
 Before treating a protocol/discovery baseline as stable for public release:
 

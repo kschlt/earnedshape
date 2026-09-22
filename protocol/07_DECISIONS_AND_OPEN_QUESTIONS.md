@@ -122,7 +122,7 @@ What should count as sufficient shared meaning?
 When should a concept remain explicitly unresolved?
 
 ### P-15 — Review timing
-Does an adversarial review triggered when the model is coherent, concrete enough to attack and still cheap to change catch more material problems, at lower cost, than one run before release? Reinstated in v0.2.1 (CP-20) after it was dropped when v0.2 moved the trigger to release.
+Does an adversarial review triggered when the model is coherent, concrete enough to attack and still cheap to change catch more material problems, at lower cost, than one run before release? Carried over in v0.2.1 (CP-20) from the Case 01 method, which is unpublished; the same claim is `HYP-019` in the [hypothesis register](../research/hypothesis-register.md).
 
 ---
 

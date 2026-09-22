@@ -23,16 +23,16 @@ Do not optimize one composite score.
 
 Evidence arrives one case at a time. At n=1 there is no population to compare against, so a run-level metric dashboard cannot be the primary instrument. Before each case, pre-register:
 
-- **hypotheses** — at most five per case, each with a stable ID from the hypothesis register;
+- **hypotheses** — at most five per case;
 - **predicted observable** — what the run should show if the hypothesis holds;
 - **falsification criterion** — what the run would show if it does not.
 
-A conclusion is drawn only against these predictions. What was not predicted may be recorded as an observation for the next case, but it is not evidence for or against a hypothesis in this one.
+### Quality gates
 
-### Gate 1
+#### Gate 1
 Discovery/handoff quality must remain acceptable.
 
-### Gate 2
+#### Gate 2
 Human understanding/agency must not materially deteriorate.
 
 The two gates still apply to every case. Cross-run Pareto comparison of state integrity, convergence, workload, active human time and process overhead becomes possible once several comparable cases exist; until then it is a diagnostic, not the verdict.
@@ -169,10 +169,10 @@ pre-registered predictions
 Rules over the pre-registered predictions of §2, not over a cross-run comparison. Both gates of §2 must hold for **Keep**.
 
 ### Keep
-The predicted observable appeared, the falsification criterion was not met, and the always-on measures (§3) did not get worse.
+The predicted observable appeared, the falsification criterion was not met, and the always-on measures (§3) showed no material defect: no cold-start blocker, the sampled decisions explainable, no systematic state-integrity defect.
 
 ### Investigate
-The prediction held, but an always-on measure or a diagnostic used for this hypothesis moved the wrong way — for example breadth, understanding, defective-AI resistance or semantic consistency declined.
+The prediction held, but an always-on measure showed a material defect, or a diagnostic used for this hypothesis — for example breadth, understanding or semantic consistency — pointed the other way.
 
 ### Revert
 The falsification criterion was met, or a gate of §2 failed: major handoff blockers, discovery reopenings, understanding loss or systematic state/concept defects.
@@ -233,7 +233,7 @@ The goal is to move from retrospective inference toward prospective evidence.
 
 ## 12. Evidence strength: one scale, two columns
 
-Every evidence record in this project uses one vocabulary for strength, and keeps two things apart that a single column conflates.
+Evidence records use one vocabulary for strength, and keep apart two things that a single column conflates. Older records keep their original labels and get the second column added (below).
 
 ### Observation clarity
 How clearly was this seen in this case?
@@ -245,7 +245,7 @@ How clearly was this seen in this case?
 ### Evidential weight
 What does it license for the protocol?
 
-- `strong` — independent, replicated or peer-reviewed support;
+- `strong` — replicated, or several independent studies;
 - `moderate` — one independent study, or consistent support from several weaker sources;
 - `weak` — practitioner literature, a single dependent or self-authored case, or the project's own inference;
 - `contested` — the evidence points in different directions.

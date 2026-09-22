@@ -24,7 +24,7 @@ The current baseline is informed by:
 
 None of these alone validates the full protocol.
 
-Strength labels in this file predate the one-scale rule of [`protocol/05`](../protocol/05_EVALUATION_AND_LEARNING.md) §12 and are kept as written; read them as statements of *evidential weight*. Known over-statements are listed in [`docs/known-findings.md`](../docs/known-findings.md) (KF-3).
+Strength labels in this file predate the one-scale rule of [`protocol/05`](../protocol/05_EVALUATION_AND_LEARNING.md) §12 and are kept as written and are not mapped onto that scale. [`docs/known-findings.md`](../docs/known-findings.md) (KF-3) lists the items labelled "strongly supported" whose sources would rate only `weak` or `moderate` there.
 
 ---
 

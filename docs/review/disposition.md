@@ -1,6 +1,6 @@
 # Status Ledger & Change-Proposal Disposition
 
-> **Published record.** The status ledger kept in the private working repository after the [adversarial review](2026-09-adversarial-review-v0.2.md), reproduced as it stood when this repository was derived (14 September 2026). It records what happened to each of the review's change proposals and to the findings they address, which is the part an outside reader cannot otherwise check. Six findings have no change proposal of their own and are not tracked in the ledger: F-04, F-06, F-12, F-15, F-20 and F-24. Of these, F-12 (no citation independently verified) has since been addressed by [`research/REFERENCES.md`](../../research/REFERENCES.md); the other five have no recorded disposition.
+> **Published record.** The status ledger kept in the private working repository after the [adversarial review](2026-09-adversarial-review-v0.2.md), reproduced as it stood when this repository was derived (14 September 2026). It records what happened to each of the review's change proposals and to the findings they address, which is the part an outside reader cannot otherwise check. Six findings have no change proposal of their own and are not tracked in the ledger: F-04, F-06, F-12, F-15, F-20 and F-24. Of these, F-12 (no citation independently verified) has since been addressed by [`research/REFERENCES.md`](../../research/REFERENCES.md); the other five have no recorded disposition. *[Update, 22 September 2026: the rows below were updated in place for protocol v0.2.1; the git history of this file holds their earlier wording.]*
 > Paths are those of the working repository: `phase0/observation-model/` is now [`protocol/observation-model/`](../../protocol/observation-model/), `phase0/capabilities/` is now [`capabilities/`](../../capabilities/), and `proposals/CP-09…` / `proposals/CP-11…` are now [`research/analogy-records.md`](../../research/analogy-records.md) and [`research/hypothesis-register.md`](../../research/hypothesis-register.md). Numbered documents (`09`–`15`) are working documents of that repository; [`docs/provenance.md`](../provenance.md) says what each is. This is the public index of change proposals `CP-01`–`CP-21`; the current state of each is kept here from now on.
 
 > **Status:** Live index for this branch. Update it when a document's standing changes.
@@ -28,9 +28,9 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP | Proposal | Disposition | Where |
 |---|---|---|---|
 | CP-01 | adversarial challenge as a convergence gate | **accepted**; **done in v0.2.1** | drafted as `CAP-10`; protocol text in `protocol/01` §13 (challenge condition, review typology) and §15 |
-| CP-02 | remove problem/solution split from mode names | **done in v0.2.1** (option b: modes keep their names) | `protocol/01` §5, `02` §1 |
+| CP-02 | remove problem/solution split from mode names | **accepted** 2026-09-22 (owner, v0.2.1 consolidation); **done in v0.2.1** (option b, the proposal's low-cost option, chosen in the consolidation; modes keep their names) | `protocol/01` §5, `02` §1 |
 | CP-03 | enumerated anchor-risk events instead of a self-judged trigger | **accepted** | drafted as `CAP-14`, whose L1 measurability depends on the list existing |
-| CP-04 | collapse the four tentativeness devices into one ladder | **done in v0.2.1** | `protocol/01` §3 (one ladder, one presentation rule), §6 demoted to guidance, `02` §7 named as its state encoding |
+| CP-04 | collapse the four tentativeness devices into one ladder | **accepted** 2026-09-22 (owner, v0.2.1 consolidation); **done in v0.2.1** | `protocol/01` §3 (one ladder, one presentation rule), §6 demoted to guidance, `02` §7 named as its state encoding |
 | CP-05 | recorded-disagreement object | **accepted** | drafted as `CAP-06` |
 | CP-06 | define the commitment act | **accepted** | drafted as `CAP-04`, including the required payload |
 | CP-07 | reinstate disconfirming evidence in `research/` | **done** | `research/01` §2A + correction in §2, with an amendment note recording the change |
@@ -39,8 +39,8 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP-10 | Case 01 method disposition table | **done** | `proposals/CP-10-case01-method-disposition.md` — 62 elements: 26 kept, 18 transformed, 18 dropped, **0 object-level**. Six new proposals arise (CP-16..CP-21) |
 | CP-11 | Core/Extended split + one hypothesis register | **done** | Core/Extended in `phase0/capabilities/catalogue.md`; register in `proposals/CP-11-hypothesis-register.md`, `HYP-001..025` over five legacy ID spaces |
 | CP-12 | conformance definition + minimal trace | **executed as a draft** | `phase0/observation-model/` and `phase0/capabilities/CONFORMANCE.md` |
-| CP-13 | redesign evaluation for n=1 | **done in v0.2.1** | `protocol/05` §2 (pre-registered predictions as the primary instrument), §3 (three always-on measures, the rest an optional diagnostic catalogue), §9 (Keep/Investigate/Revert over predictions), §11 |
-| CP-14 | declare the configuration assumption | **done in v0.2.1** | `protocol/01` §1, "Declared scope" |
+| CP-13 | redesign evaluation for n=1 | **accepted** 2026-09-22 (owner, v0.2.1 consolidation); **done in v0.2.1** | `protocol/05` §2 (pre-registered predictions as the primary instrument), §3 (three always-on measures, the rest an optional diagnostic catalogue), §9 (Keep/Investigate/Revert over predictions), §11 |
+| CP-14 | declare the configuration assumption | **accepted** 2026-09-22 (owner, v0.2.1 consolidation); **done in v0.2.1** | `protocol/01` §1, "Declared scope" |
 | CP-15 | context-scope concept status; move turn economics to binding guidance | **deferred** | `CAP-11` inherits the unresolved context-scope question and says so |
 
 **All four outstanding accepted proposals are now done** (CP-07, CP-09, CP-10, CP-11). Five remain deferred to a v0.2.1 consolidation pass (CP-02, CP-04, CP-08, CP-13, CP-14), and executing CP-10 produced six new ones. *[Note added on publication: the table above defers six proposals, four of them to v0.2.1 (CP-02, CP-04, CP-13, CP-14) and two without a target version (CP-08, CP-15).]* *[Update, v0.2.1: CP-02, CP-04, CP-08, CP-13 and CP-14 are done; CP-15 is the only proposal from the review still deferred.]*
@@ -64,7 +64,7 @@ All six applied in v0.2.1. CP-18 added `CAP-16` to the catalogue as an Extended 
 |---|---|---|---|
 | CP-22 | resolve known finding KF-2: move `protocol/07` section B (deferred technical decisions `T-01`–`T-10`) out of the protocol into project documentation, and mark `T-01` (project name) decided | **accepted** 2026-09-22 (owner decision to resolve KF-2 through a change proposal); **done** for v0.2.1 | [`docs/technical-decisions.md`](../technical-decisions.md); `protocol/07` keeps a one-line pointer where section B was |
 
-CP-22 changes where the register lives, not what it says: no deferred decision other than `T-01` is decided by it, and sections A, C, D and E of `protocol/07` are unchanged. With section B gone, `protocol/07` no longer names a harness.
+CP-22 changes where the register lives, not what it says: no deferred decision other than `T-01` is decided by it, and sections A, C, D and E of `protocol/07` are unchanged by it. With section B gone, `protocol/07` no longer names a harness.
 
 ## 3. Priority findings from doc 09 §4
 
