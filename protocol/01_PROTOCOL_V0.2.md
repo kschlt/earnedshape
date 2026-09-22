@@ -388,6 +388,14 @@ When importing a prior framework, product or method:
 
 A useful analogy may still become a fixation source if its operating assumptions are silently imported.
 
+### Reuse check before architecture
+
+The Analogy Boundary Check covers borrowed *ideas*. Borrowed *components* need their own gate, at the point of decision rather than at the end:
+
+> **Does the critical part already exist externally, and does it actually work?**
+
+If the answer is uncertain, spike before designing around it (§13, review typology). §14's "material external contracts are verified or deliberately deferred" is the readiness check that follows; it does not replace this gate.
+
 ---
 
 ## 12. Divergence rules
@@ -401,6 +409,15 @@ During deliberate divergence:
 - keep candidate language visibly tentative;
 - expose competing models, not synonym lists;
 - compare before ranking.
+
+### Counterexamples
+
+Classify every counterexample when it arrives:
+
+- **local** — the model survives with a bounded fix;
+- **structural** — the model's frame, boundaries or core concepts have to change.
+
+Counterexample work is **saturated** when new counterexamples cause mostly local changes. Saturation is evidence for convergence (§13); a structural counterexample after apparent saturation reopens it.
 
 ---
 
@@ -446,6 +463,18 @@ A review is not finished when its findings are written down. The return leg:
 4. end with a verdict: **ready** or **not ready**.
 
 The verification pass must not reopen the product. A second review that brainstorms new directions is a new exploration, and should be named as one.
+
+### Stop signal
+
+A discovery can keep running while producing nothing. Check for these symptoms during a session, not only afterwards:
+
+- new turns mainly add hypothetical future features;
+- options are debated that can only be decided in code;
+- settled decisions are restated;
+- artifacts are re-sorted rather than changed;
+- no new evidence and no new decisions appear.
+
+When they dominate, stop and decide: converge (this section), hand off with the open points deferred (§14), or name the specific uncertainty that justifies continuing. `05` §3's No-New-Evidence Reopenings measures the same failure after the fact, which is too late to act on.
 
 ---
 

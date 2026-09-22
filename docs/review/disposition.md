@@ -50,11 +50,11 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP | Proposal | Priority | Disposition | Where |
 |---|---|---|---|---|
 | CP-16 | close the review loop: repair leg, resolution log, scoped re-review | high | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §13, "Closing the review loop" |
-| CP-17 | an in-session stop heuristic | high | **accepted** 2026-09-22 (owner) | — |
+| CP-17 | an in-session stop heuristic | high | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §13, "Stop signal" |
 | CP-18 | information-loss gate, generalized beyond terminology | high | **accepted** 2026-09-22 (owner) | — |
-| CP-19 | reuse gate before architecture | medium | **accepted** 2026-09-22 (owner) | — |
+| CP-19 | reuse gate before architecture | medium | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §11, "Reuse check before architecture" |
 | CP-20 | review timing on cost-of-change; reinstate the dropped open question | medium | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §13, "When to review"; open question reinstated as `07` P-15 |
-| CP-21 | classify counterexamples local vs structural; define saturation | medium | **accepted** 2026-09-22 (owner) | — |
+| CP-21 | classify counterexamples local vs structural; define saturation | medium | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §12, "Counterexamples" (classification and saturation) |
 
 None applied. CP-18 would add `CAP-16` to the catalogue.
 
