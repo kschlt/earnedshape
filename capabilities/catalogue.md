@@ -59,7 +59,7 @@
 
 ### CAP-05 · Deferred decision register
 **class** enforcement · **depends on** CAP-01
-**derives from** protocol §14, `07_DECISIONS_AND_OPEN_QUESTIONS` §B
+**derives from** protocol §14, the deferred-decision register (`07_DECISIONS_AND_OPEN_QUESTIONS` §B up to v0.2, now [`docs/technical-decisions.md`](../docs/technical-decisions.md))
 **required** A deliberately deferred question is recorded with its reason and the point at which it should be decided, and remains retrievable until resolved.
 **must emit** `deferral.recorded`, `deferral.resolved`
 **eval L1** Deferrals visible in the transcript but absent from the register; resolved questions never closed.

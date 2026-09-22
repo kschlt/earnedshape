@@ -4,6 +4,7 @@ Protocol versions are recorded here with the changed rule, the observation that 
 
 ## Unreleased
 
+- **Protocol (towards v0.2.1), CP-22:** section B of `protocol/07`, the register of deferred technical decisions `T-01`–`T-10`, moved to [`docs/technical-decisions.md`](docs/technical-decisions.md), and `T-01` (project name) is marked decided. *Observation:* known finding KF-2 — the register holds project decisions, not protocol semantics, and it was the only reason the normative layer named a harness. *Still hypothesis:* nothing new; no other deferred decision is decided by the move. KF-2 is closed.
 - Research references checked against publisher and index records, with unconfirmed fields marked; review record, change-proposal disposition, hypothesis register and analogy records published (see `docs/review/`, `research/`).
 
 ---

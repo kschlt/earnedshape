@@ -58,6 +58,14 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 
 None applied. CP-18 would add `CAP-16` to the catalogue.
 
+### Proposals from known findings
+
+| CP | Proposal | Disposition | Where |
+|---|---|---|---|
+| CP-22 | resolve known finding KF-2: move `protocol/07` section B (deferred technical decisions `T-01`–`T-10`) out of the protocol into project documentation, and mark `T-01` (project name) decided | **accepted** 2026-09-22 (owner decision to resolve KF-2 through a change proposal); **done** for v0.2.1 | [`docs/technical-decisions.md`](../technical-decisions.md); `protocol/07` keeps a one-line pointer where section B was |
+
+CP-22 changes where the register lives, not what it says: no deferred decision other than `T-01` is decided by it, and sections A, C, D and E of `protocol/07` are unchanged. With section B gone, `protocol/07` no longer names a harness.
+
 ## 3. Priority findings from doc 09 §4
 
 | Finding | Status |

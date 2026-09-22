@@ -2,4 +2,3 @@
 # Each entry is explained in docs/known-findings.md. Removing an entry is a fix;
 # adding one is a decision that should carry a reason in that document.
 protocol/06_OPEN_SOURCE_AND_PROJECT_PRINCIPLES.md:114: R1
-protocol/07_DECISIONS_AND_OPEN_QUESTIONS.md:91: R1

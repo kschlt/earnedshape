@@ -12,13 +12,6 @@ The rule is about citation provenance, not about one product. A technology-indep
 
 **Status:** open. The protocol is not edited without an accepted change proposal, and this one has not been through that process.
 
-## KF-2 · `protocol/07` section B does not belong in the protocol
-
-`T-03` names a specific harness as a candidate for the first binding. Taken alone this is a naming issue; the real finding is a layering one. Section B of `07` is a register of **deferred technical decisions** — repository topology, state serialisation, skill architecture, release workflow. Those are project decisions, not protocol semantics, and their presence is the only reason the normative layer names a harness at all.
-
-**Proposed fix:** move section B out of `protocol/` into project documentation, leaving `07` with protocol decisions and open protocol questions.
-**Status:** open, and the more consequential of the two.
-
 ## KF-3 · `research/` states some claims more strongly than their sources support
 
 The citation check of September 2026 ([`research/REFERENCES.md`](../research/REFERENCES.md)) found every cited work (a few bibliographic fields remain unconfirmed and are marked there), and found that several items under "strongly supported" in `research/01` §2, and a few statements in `research/02`, rest on practitioner literature, a single study, or the project's own inference. The clearest cases: *language and model can co-evolve* (method literature only), *AI is valuable for articulation, search, synthesis and critique* (articulation and drafting are supported, synthesis rests on one preprint, search and critique are not covered), and *human situated input is epistemically special* (a normative reading of requirements research).

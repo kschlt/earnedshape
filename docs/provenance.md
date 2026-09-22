@@ -46,10 +46,11 @@ Files here sometimes cite these by number, for example "doc 10" or `09`.
 
 | IDs | Meaning | Defined in |
 |---|---|---|
-| `D-nn`, `T-nn`, `P-nn`, `E-nn` | protocol decisions, deferred technical decisions, open protocol questions, evaluation questions | [`protocol/07`](../protocol/07_DECISIONS_AND_OPEN_QUESTIONS.md); `T-11`–`T-13` were proposed in the [adversarial review](review/2026-09-adversarial-review-v0.2.md) |
+| `D-nn`, `P-nn`, `E-nn` | protocol decisions, open protocol questions, evaluation questions | [`protocol/07`](../protocol/07_DECISIONS_AND_OPEN_QUESTIONS.md) |
+| `T-nn` | deferred technical decisions (project decisions, not protocol semantics) | [`docs/technical-decisions.md`](technical-decisions.md), section B of `protocol/07` up to v0.2; `T-11`–`T-13` were proposed in the [adversarial review](review/2026-09-adversarial-review-v0.2.md) |
 | `CAP-nn` | capabilities | [`capabilities/catalogue.md`](../capabilities/catalogue.md) |
 | `F-nn` | findings of the adversarial review | [`docs/review/`](review/2026-09-adversarial-review-v0.2.md) §3 |
-| `CP-nn` | change proposals, `CP-01`–`CP-15` from the review, `CP-16`–`CP-21` from executing CP-10 | [`docs/review/disposition.md`](review/disposition.md) |
+| `CP-nn` | change proposals, `CP-01`–`CP-15` from the review, `CP-16`–`CP-21` from executing CP-10, `CP-22` from known finding KF-2 | [`docs/review/disposition.md`](review/disposition.md) |
 | `HYP-nnn` | unified hypothesis register | [`research/hypothesis-register.md`](../research/hypothesis-register.md) |
 | `KF-n` | known findings against the published baseline | [`docs/known-findings.md`](known-findings.md) |
 | `M-nn`, `M1`–`M8`, `G1`–`G7`, `L1`–`L10`, `AP-nn`, `SC-n`, `EV-n`, "Phase n" | codes inside the Case 01 retrospective: method hypotheses, method elements, guidelines, lessons, anti-patterns | unpublished |

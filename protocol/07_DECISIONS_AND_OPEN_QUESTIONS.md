@@ -81,30 +81,7 @@ Tentative structure can appear early across frames, concepts, terms and solution
 
 ---
 
-## B. Deferred technical decisions
-
-### T-01 — Final project/repository name
-
-### T-02 — Monorepo vs multiple repos
-
-### T-03 — First reference harness
-Claude Code remains a strong candidate, not a normative commitment.
-
-### T-04 — State serialization
-
-### T-05 — Skill/hook/agent architecture
-
-### T-06 — Review/handoff UI
-
-### T-07 — Automated evaluator architecture
-
-### T-08 — Public release workflow
-
-### T-09 — Concept/shared-language storage
-Separate registry vs integrated state vs implicit memory.
-
-### T-10 — Visible terminology provenance
-Whether Human/AI/External origin should be shown.
+> Former section B, the deferred technical decisions `T-01`–`T-10`, is now [`docs/technical-decisions.md`](../docs/technical-decisions.md) (change proposal CP-22): they are project decisions, not protocol semantics.
 
 ---
 
