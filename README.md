@@ -70,11 +70,11 @@ Phase 1 finds out what can actually be observed before anything steers: first, w
 
 Two retrospective cases, the second derived from the first, so recurrence between them is dependent rather than replicated. No independent case yet.
 
-The study closest to this protocol's target task — LLM support for problem framing, N=280 — found no improvement in frame quality, a widened gap between experienced and inexperienced practitioners, and lower perceived agency among novices. So the honest claim is not that research supports this:
+The study closest to this protocol's target task — LLM support for problem framing, N=280 ([Shin et al., CHI 2025](https://doi.org/10.1145/3706598.3713273)) — found no improvement in frame quality, a widened gap between experienced and inexperienced practitioners, and lower perceived agency among novices. So the honest claim is not that research supports this:
 
 > earnedshape is a bet that the **design of the interaction** — not the presence of the AI — decides the outcome. The bet is plausible, unproven, and the project is built so that it can lose.
 
-Open findings against this baseline, including two reported by the project's own lint against its own protocol, are in [`docs/known-findings.md`](docs/known-findings.md).
+Every source the research synthesis relies on is listed and checked in [`research/REFERENCES.md`](research/REFERENCES.md), including where the support is thinner than the wording. Open findings against this baseline, including two reported by the project's own lint against its own protocol, are in [`docs/known-findings.md`](docs/known-findings.md).
 
 ## Contributing
 

@@ -1,5 +1,7 @@
 # Shared Language Research — Protocol Implications
 
+> **Sources** for the research claims below are listed in [`REFERENCES.md`](REFERENCES.md), with a table of which claim rests on which study. Two claims here are weaker than they read — the effect of labels on attention, and LLM reformulation revealing implicit content — and two are protocol inferences rather than findings (candidate terms as semantic probes; the failure-mode list); see [the notes there](REFERENCES.md#where-the-support-is-thinner-than-the-wording).
+
 ## Decision
 
 Shared Conceptual Language should enter Protocol v0.2 as a **first-class cross-cutting concern**, but not as:
