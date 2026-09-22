@@ -172,7 +172,7 @@ Rules over the pre-registered predictions of §2, not over a cross-run compariso
 The predicted observable appeared, the falsification criterion was not met, and the always-on measures (§3) showed no material defect: no cold-start blocker, the sampled decisions explainable, no systematic state-integrity defect.
 
 ### Investigate
-The prediction held, but an always-on measure showed a material defect, or a diagnostic used for this hypothesis — for example breadth, understanding or semantic consistency — pointed the other way.
+The prediction held, but an always-on measure showed a material defect, or a diagnostic used for this hypothesis — for example Useful Breadth (§3) or a shared-language diagnostic (§4) — pointed the other way.
 
 ### Revert
 The falsification criterion was met, or a gate of §2 failed: major handoff blockers, discovery reopenings, understanding loss or systematic state/concept defects.
@@ -233,7 +233,7 @@ The goal is to move from retrospective inference toward prospective evidence.
 
 ## 12. Evidence strength: one scale, two columns
 
-Evidence records use one vocabulary for strength, and keep apart two things that a single column conflates. Older records keep their original labels and get the second column added (below).
+Evidence records use one vocabulary for strength, and keep apart two things that a single column conflates. Older evidence ledgers keep their original labels and get the second column added (below).
 
 ### Observation clarity
 How clearly was this seen in this case?

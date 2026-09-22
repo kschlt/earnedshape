@@ -30,7 +30,7 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP-01 | adversarial challenge as a convergence gate | **accepted**; **done in v0.2.1** | drafted as `CAP-10`; protocol text in `protocol/01` §13 (challenge condition, review typology) and §15 |
 | CP-02 | remove problem/solution split from mode names | **accepted** 2026-09-22 (owner, v0.2.1 consolidation); **done in v0.2.1** (option b, the proposal's low-cost option, chosen in the consolidation; modes keep their names) | `protocol/01` §5, `02` §1 |
 | CP-03 | enumerated anchor-risk events instead of a self-judged trigger | **accepted** | drafted as `CAP-14`, whose L1 measurability depends on the list existing |
-| CP-04 | collapse the four tentativeness devices into one ladder | **accepted** 2026-09-22 (owner, v0.2.1 consolidation); **done in v0.2.1** | `protocol/01` §3 (one ladder, one presentation rule), §6 demoted to guidance, `02` §7 named as its state encoding |
+| CP-04 | collapse the four tentativeness devices into one ladder | **accepted** 2026-09-22 (owner, v0.2.1 consolidation); **done in v0.2.1** | `protocol/01` §3 (one ladder, one presentation rule), §6 demoted to guidance, two dimensions of `02` §7 named as its state encoding |
 | CP-05 | recorded-disagreement object | **accepted** | drafted as `CAP-06` |
 | CP-06 | define the commitment act | **accepted** | drafted as `CAP-04`, including the required payload |
 | CP-07 | reinstate disconfirming evidence in `research/` | **done** | `research/01` §2A + correction in §2, with an amendment note recording the change |

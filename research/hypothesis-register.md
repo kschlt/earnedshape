@@ -2,7 +2,7 @@
 
 > **Published record of change proposal CP-11** (see [`docs/review/disposition.md`](../docs/review/disposition.md)). Status unchanged: a proposal; nothing in `protocol/` has been renamed yet. The legacy IDs in the fifth column come from the two unpublished evidence cases and the protocol files; [`docs/provenance.md`](../docs/provenance.md) explains them. `phase0/capabilities/catalogue.md` is now [`capabilities/catalogue.md`](../capabilities/catalogue.md).
 
-> **Executes:** the second half of change proposal CP-11, addressing the ID sprawl recorded in `09` §2.2: the same claims currently carry different identifiers in five places — `H-01..H-12` (Case 02 §15), `H-SL-01` (Case 02A), `E1..E10` (`protocol/05` §10), `P-01..P-14` / `E-01..E-08` / `T-01..T-13` (`protocol/07`; *added on publication:* `T-11..T-13` were proposed in the adversarial review), and `M-01..M-12` (Case 01). A reader cannot tell whether two IDs are one claim.
+> **Executes:** the second half of change proposal CP-11, addressing the ID sprawl recorded in `09` §2.2: the same claims currently carry different identifiers in five places — `H-01..H-12` (Case 02 §15), `H-SL-01` (Case 02A), `E1..E10` (`protocol/05` §10), `P-01..P-14` / `E-01..E-08` / `T-01..T-13` (`protocol/07`; *added on publication:* `T-11..T-13` were proposed in the adversarial review), and `M-01..M-12` (Case 01). A reader cannot tell whether two IDs are one claim. *(As of v0.2. In v0.2.1, `P-15` was added and `T-01..T-10` moved to [`docs/technical-decisions.md`](../docs/technical-decisions.md).)*
 > **Status:** proposal. Nothing renamed in `protocol/` yet.
 
 ## Structure
