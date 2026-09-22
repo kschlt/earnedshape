@@ -1,6 +1,6 @@
 # Run Record
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 > **Owns:** what a discovery run is, how it is identified, and the metadata without which two runs cannot honestly be compared.
 

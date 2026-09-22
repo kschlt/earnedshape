@@ -1,6 +1,6 @@
-# Human–AI Discovery Protocol v0.2
+# Human–AI Discovery Protocol v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## 1. Objective
 

@@ -23,7 +23,7 @@
 
 ## 2. Change-proposal disposition
 
-Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains correct — the protocol is untouched. What follows is where each now stands.
+Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains correct — the protocol is untouched. What follows is where each now stands. *[Update, 22 September 2026: protocol v0.2.1 applies CP-01, CP-02, CP-04, CP-08, CP-13 and CP-14 to the protocol text; the rows below say where each landed.]*
 
 | CP | Proposal | Disposition | Where |
 |---|---|---|---|
@@ -43,7 +43,7 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP-14 | declare the configuration assumption | **done in v0.2.1** | `protocol/01` §1, "Declared scope" |
 | CP-15 | context-scope concept status; move turn economics to binding guidance | **deferred** | `CAP-11` inherits the unresolved context-scope question and says so |
 
-**All four outstanding accepted proposals are now done** (CP-07, CP-09, CP-10, CP-11). Five remain deferred to a v0.2.1 consolidation pass (CP-02, CP-04, CP-08, CP-13, CP-14), and executing CP-10 produced six new ones. *[Note added on publication: the table above defers six proposals, four of them to v0.2.1 (CP-02, CP-04, CP-13, CP-14) and two without a target version (CP-08, CP-15).]*
+**All four outstanding accepted proposals are now done** (CP-07, CP-09, CP-10, CP-11). Five remain deferred to a v0.2.1 consolidation pass (CP-02, CP-04, CP-08, CP-13, CP-14), and executing CP-10 produced six new ones. *[Note added on publication: the table above defers six proposals, four of them to v0.2.1 (CP-02, CP-04, CP-13, CP-14) and two without a target version (CP-08, CP-15).]* *[Update, v0.2.1: CP-02, CP-04, CP-08, CP-13 and CP-14 are done; CP-15 is the only proposal from the review still deferred.]*
 
 ### New proposals from CP-10
 
@@ -56,7 +56,7 @@ Doc 09 proposed CP-01..CP-15. None were applied to the protocol; that remains co
 | CP-20 | review timing on cost-of-change; reinstate the dropped open question | medium | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §13, "When to review"; open question reinstated as `07` P-15 |
 | CP-21 | classify counterexamples local vs structural; define saturation | medium | **accepted** 2026-09-22 (owner); **done in v0.2.1** | `protocol/01` §12, "Counterexamples" (classification and saturation) |
 
-None applied. CP-18 would add `CAP-16` to the catalogue.
+All six applied in v0.2.1. CP-18 added `CAP-16` to the catalogue as an Extended capability.
 
 ### Proposals from known findings
 
@@ -70,11 +70,11 @@ CP-22 changes where the register lives, not what it says: no deferred decision o
 
 | Finding | Status |
 |---|---|
-| F-02 no adversarial gate | addressed by CP-01 → `CAP-10`; protocol text unchanged |
+| F-02 no adversarial gate | addressed by CP-01 → `CAP-10`; protocol text in `protocol/01` §13 since v0.2.1 |
 | F-22 commitment act undefined | addressed by CP-06 → `CAP-04` |
 | F-25 no conformance definition | addressed by CP-12 → phase 0, as a draft |
 | F-08 no declared core | addressed by CP-11 → Core/Extended proposal in the catalogue |
-| F-09 evaluation undecidable at n=1 | **open** — CP-13 deferred |
+| F-09 evaluation undecidable at n=1 | addressed by CP-13 in v0.2.1 (`protocol/05` §2, §3, §9); untested until a pre-registered case runs |
 | F-10 / F-11 curated layer drops counter-evidence | **closed** — CP-07 applied to `research/01` |
 
 ## 4. Corrections applied after the branch review

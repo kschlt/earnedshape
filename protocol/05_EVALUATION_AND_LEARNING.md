@@ -1,6 +1,6 @@
-# Evaluation & Learning Protocol v0.2
+# Evaluation & Learning Protocol v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## 1. Principle
 
@@ -253,4 +253,3 @@ What does it license for the protocol?
 Observation clarity never raises evidential weight: a clearly observed pattern in one self-authored, dependent case is still `weak` evidence for the protocol.
 
 Existing evidence ledgers are not rewritten to fit. The second column is **added**, with a dated note, and the original judgements stay as they were recorded.
-

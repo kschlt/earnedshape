@@ -1,6 +1,6 @@
-# Decisions & Open Questions — v0.2
+# Decisions & Open Questions — v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## A. Current protocol decisions
 

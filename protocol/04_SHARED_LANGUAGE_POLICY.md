@@ -1,6 +1,6 @@
-# Shared Conceptual Language Policy v0.2
+# Shared Conceptual Language Policy v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## 1. Purpose
 

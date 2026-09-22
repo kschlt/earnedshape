@@ -16,7 +16,7 @@ The rule is about citation provenance, not about one product. A technology-indep
 
 The citation check of September 2026 ([`research/REFERENCES.md`](../research/REFERENCES.md)) found every cited work (a few bibliographic fields remain unconfirmed and are marked there), and found that several items under "strongly supported" in `research/01` §2, and a few statements in `research/02`, rest on practitioner literature, a single study, or the project's own inference. The clearest cases: *language and model can co-evolve* (method literature only), *AI is valuable for articulation, search, synthesis and critique* (articulation and drafting are supported, synthesis rests on one preprint, search and critique are not covered), and *human situated input is epistemically special* (a normative reading of requirements research).
 
-**Proposed fix:** a v0.2.1 pass over `research/01` §2 that moves these items out of "strongly supported" or narrows their wording, with the change recorded here and in the changelog.
+**Proposed fix:** a pass over `research/01` §2 (not part of the v0.2.1 consolidation) that moves these items out of "strongly supported" or narrows their wording, with the change recorded here and in the changelog.
 **Status:** open. The claims are marked in place and listed in full in `REFERENCES.md`; the wording itself is unchanged until that pass.
 
 ## What this file is not

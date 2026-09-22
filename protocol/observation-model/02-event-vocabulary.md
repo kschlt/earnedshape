@@ -1,6 +1,6 @@
 # Event Vocabulary
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 > **Owns:** the envelope every event carries, the event kinds, and which subset is required for a conformant run.
 

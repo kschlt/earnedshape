@@ -80,4 +80,4 @@ Every source the research synthesis relies on is listed and checked in [`researc
 
 The scarcest contribution is evidence, not features — especially a discovery where the protocol cost more than it returned. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-Prose is CC BY 4.0, code is MIT ([`docs/licensing.md`](docs/licensing.md)). Protocol `v0.2`; protocol and adapter maturity are versioned separately. "Human–AI Discovery Protocol", still the heading of [`protocol/01_PROTOCOL_V0.2.md`](protocol/01_PROTOCOL_V0.2.md), is the earlier working title; the protocol is now called earnedshape.
+Prose is CC BY 4.0, code is MIT ([`docs/licensing.md`](docs/licensing.md)). Protocol `v0.2.1`; protocol and adapter maturity are versioned separately. "Human–AI Discovery Protocol", still the heading of [`protocol/01_PROTOCOL_V0.2.md`](protocol/01_PROTOCOL_V0.2.md), is the earlier working title; the protocol is now called earnedshape.

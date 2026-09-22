@@ -37,4 +37,4 @@ Curated synthesis, including a standing section for evidence *against* the premi
 
 ## Maturity
 
-Protocol maturity and adapter maturity are tracked separately and move at different speeds. Today: protocol `v0.2`, no adapter, no instrumented run, conformance matrix empty. The honest summary is that the specification layer exists and nothing has been tested.
+Protocol maturity and adapter maturity are tracked separately and move at different speeds. Today: protocol `v0.2.1`, no adapter, no instrumented run, conformance matrix empty. The honest summary is that the specification layer exists and nothing has been tested.

@@ -14,6 +14,7 @@ This repository was derived on 14 September 2026 from a private working reposito
 | 10–14 Sep 2026 | **Phase 0**: observation model, capability catalogue, conformance matrix, boundary lint; four change proposals executed | [`protocol/observation-model/`](../protocol/observation-model/), [`capabilities/`](../capabilities/), [`research/hypothesis-register.md`](../research/hypothesis-register.md), [`research/analogy-records.md`](../research/analogy-records.md) |
 | 14 Sep 2026 | Name decided, this repository derived | [`examples/naming-decision.md`](../examples/naming-decision.md) |
 | from 14 Sep 2026 | **Phase 1** planned: feasibility spikes on what can be observed | [`docs/phase-1-feasibility.md`](phase-1-feasibility.md) |
+| 22 Sep 2026 | **Protocol v0.2.1**: the accepted change proposals applied to the protocol text | [`CHANGELOG.md`](../CHANGELOG.md), [`docs/review/disposition.md`](review/disposition.md) |
 
 Cases 01 and 02 and the v0.1/v0.2 baseline were produced with ChatGPT-family models and a deep-research tool; the review and Phase 0 were done with Claude in Claude Code. The same person is practitioner, protocol author, evidence analyst and evaluator throughout — the central threat to validity the review names.
 
