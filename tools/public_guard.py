@@ -183,15 +183,26 @@ def self_test():
 
 
 def git_cases(at, deny):
-    """Run the git-reading rules against a throwaway repository with known leaks."""
+    """Run the git-reading rules against a throwaway repository with known leaks.
+
+    The sample repository gets its own environment: no variable that points
+    git at another repository, no global or system config (signing, hooks,
+    templates), and identities set per commit.
+    """
     bad, good = f"me{at}private.test.de", f"1+u{at}users.noreply.github.com"
-    saved = {k: os.environ.get(k) for k in
-             ("GIT_AUTHOR_NAME", "GIT_AUTHOR_EMAIL", "GIT_COMMITTER_NAME", "GIT_COMMITTER_EMAIL")}
+    saved = dict(os.environ)
+    for k in list(os.environ):
+        if k.startswith("GIT_"):
+            del os.environ[k]
+    os.environ.update(GIT_CONFIG_GLOBAL=os.devnull, GIT_CONFIG_NOSYSTEM="1")
 
     def ident(author_email, committer_email, committer_name="u"):
         os.environ.update(GIT_AUTHOR_NAME="u", GIT_AUTHOR_EMAIL=author_email,
                           GIT_COMMITTER_NAME=committer_name,
                           GIT_COMMITTER_EMAIL=committer_email)
+
+    def commit(text):
+        git(root, "commit", "-q", "--no-verify", "--allow-empty", "-m", text)
 
     try:
         with tempfile.TemporaryDirectory() as tmp:
@@ -200,27 +211,26 @@ def git_cases(at, deny):
             (root / "leak.md").write_text(f"contact {bad}\n")
             git(root, "add", "leak.md")
             ident(good, good)
-            git(root, "commit", "-q", "--no-verify", "-m", "clean")
+            commit("clean")
+            ident(bad, good)
+            commit(f"author leak, reach me: x{at}corp.io")   # P2 author + P3
             ident(good, bad)
-            git(root, "commit", "-q", "--no-verify", "--allow-empty", "-m", "committer leak")
+            commit("committer leak")                         # P2 committer
             ident(good, good, committer_name="Canary-Term")
-            git(root, "commit", "-q", "--no-verify", "--allow-empty", "-m", "name leak")
+            commit("name leak")                              # P4 name
             message = root / "message.txt"
             message.write_text(f"reach me: x{at}corp.io\n")
             ident(bad, good)
             return [
                 ("git: tracked file", rule_tracked_files(root, []), 1),
-                ("git: committer email and name", rule_commits(root, "HEAD", deny), 2),
+                ("git: author, message, committer and name", rule_commits(root, "HEAD", deny), 4),
                 ("git: new commit message and identity", rule_message_file(root, message, []), 2),
             ]
     except (OSError, subprocess.CalledProcessError) as e:
         return [(f"git: could not build the sample repository ({type(e).__name__})", [], 1)]
     finally:
-        for k, v in saved.items():
-            if v is None:
-                os.environ.pop(k, None)
-            else:
-                os.environ[k] = v
+        os.environ.clear()
+        os.environ.update(saved)
 
 
 def parse_args(argv):
