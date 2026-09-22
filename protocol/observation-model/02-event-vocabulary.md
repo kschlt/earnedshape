@@ -88,6 +88,7 @@ Not required for conformance. Each corresponds to a mechanism the protocol curre
 | `concept.tested_in_use` | `concept_id`, `scenario_ref`, `outcome` | the scenario gate |
 | `research.delta_recorded` | `question`, `result`, `decision_impact`, `new_uncertainty` | research model delta |
 | `analogy.recorded` | `source`, `original_problem`, `transferable`, `non_transferable` | analogy boundary check |
+| `normalization.recorded` | `discarded`, `reconstruction_cost` | information-loss check before normalization |
 | `human_position.elicited` | `trigger`, `contribution_type`, `before_ai_output` | the human-first signal |
 | `probe.debriefed` | `probe_id`, `learning_ref`, `assumption_changed`, `disposition` | probe debrief |
 | `adversarial_review.completed` | `scope`, `reviewer_kind`, `findings`, `blocking` | the adversarial gate |

@@ -342,6 +342,15 @@ The AI should distinguish:
 
 See `04_SHARED_LANGUAGE_POLICY.md`.
 
+### Information-loss check before normalization
+
+Preserving source expressions (`04` §4) is one instance of a general rule. Whenever source-grounded information is about to be irreversibly normalized — merged, summarised, mapped onto a schema, renamed or discarded — first record:
+
+- what is being discarded;
+- what it would cost to reconstruct it later.
+
+If the reconstruction cost is high and the information may still matter, keep a reference to the source instead of discarding it.
+
 ---
 
 ## 10. Research behavior

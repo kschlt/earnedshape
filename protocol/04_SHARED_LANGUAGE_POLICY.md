@@ -66,6 +66,8 @@ Source language is evidence about how the problem is currently understood.
 
 It is not automatically the final canonical vocabulary.
 
+This section is the terminology instance of the general information-loss check before normalization (`01` §9).
+
 ---
 
 ## 5. AI naming as proposal

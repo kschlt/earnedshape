@@ -167,16 +167,20 @@
 **falsified by** Records are produced and no import error is ever caught by one.
 **note** The protocol does not currently apply this to its own imports (finding F-18). The capability should be exercised on those four first — the cheapest possible test, on material already at hand. Done by hand as change proposal CP-09: [`research/analogy-records.md`](../research/analogy-records.md) — each of the four records produced a finding, none of them cosmetic.
 
+### CAP-16 · Information-loss gate
+**class** enforcement · **depends on** CAP-01
+**derives from** protocol §9 (information-loss check before normalization), change proposal CP-18; `04_SHARED_LANGUAGE_POLICY` §4; Case 01 G3, AP-05, L3, L7, M-05
+**required** Before source-grounded information is irreversibly normalized — merged, summarised, mapped onto a schema, renamed or discarded — a record states what is being discarded and what reconstructing it would cost.
+**must emit** `normalization.recorded`
+**eval L1** Irreversible normalizations of source material with no record.
+**eval L2** Whether information later found missing had been recorded as discarded, and whether its recorded reconstruction cost was realistic.
+**falsified by** Records are produced and no discarded information is ever needed again, while the recording cost is visible.
+
 ---
 
 ## Reserved
 
-An identifier is allocated the moment a proposal depends on it, so that it cannot be reused while the proposal is open. A reservation is not a specification.
-
-### CAP-16 · Information-loss gate
-**status** reserved, not specified · **class** enforcement · **from** change proposal CP-18
-Before an irreversible normalization, record what source-grounded information is being discarded and what reconstructing it would cost. v0.2 has this only for terminology; Case 01 identified the general form as transferable to any system that ingests and transforms external information.
-**would emit** `normalization.recorded {discarded, reconstruction_cost}`
+An identifier is allocated the moment a proposal depends on it, so that it cannot be reused while the proposal is open. A reservation is not a specification. No identifier is currently reserved.
 
 ---
 
