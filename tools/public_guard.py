@@ -26,8 +26,10 @@ line, matched case-insensitively as a whole word; a line starting with
 `re:` is a regular expression; `#` starts a comment.
 
 Findings are printed with the matched text masked, because CI logs of a
-public repository are public too. `--self-test` runs the rules against
-built-in samples, so CI shows the guard still catches what it should.
+public repository are public too. `--self-test` runs every rule against
+built-in samples and a throwaway git repository with known leaks (tracked
+file, committer, name, new commit), so CI shows the guard still catches
+what it should.
 
 Usage:  python3 tools/public_guard.py [repo_root] [--commits REV]
                                      [--message-file PATH] [--deny-file PATH]
@@ -39,9 +41,11 @@ Usage:  python3 tools/public_guard.py [repo_root] [--commits REV]
         python3 tools/public_guard.py --self-test
 Exit:   0 clean, 1 violations found, 2 usage or git error.
 """
+import os
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}")
@@ -54,14 +58,14 @@ ALLOWED_SUFFIXES = (
 )
 
 
-# `name@2x.png` is an asset name, not an address.
-FILE_SUFFIXES = (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".pdf")
+# `icon@2x.png` is a retina asset name, not an address.
+ASSET_RE = re.compile(r"@\d+(?:\.\d+)?x\.(?:png|jpe?g|gif|svg|webp)$", re.I)
 
 
 def allowed(email: str) -> bool:
     e = email.lower()
     return (e in ALLOWED_ADDRESSES or e.endswith(ALLOWED_SUFFIXES)
-            or e.endswith(FILE_SUFFIXES))
+            or bool(ASSET_RE.search(e)))
 
 
 def mask(text: str) -> str:
@@ -166,7 +170,9 @@ def self_test():
         ("P3 fires", list(scan_text(f"reach me: x{at}corp.io", where, [], "P3")), 1),
         ("P4 fires", list(scan_text("a Canary-Term here", where, deny, "P3")), 1),
         ("P4 whole word", list(scan_text("canary-terms", where, deny, "P3")), 0),
+        ("asset-shaped address", list(scan_text(f"j.doe{at}corp-mail.de.pdf", where, [], "P1")), 1),
     ]
+    cases += git_cases(at, deny)
     failed = [name for name, got, want in cases if len(got) != want]
     if mask(f"secret{at}x.io") != "s*********o":
         failed.append("mask hides the middle")
@@ -174,6 +180,47 @@ def self_test():
         print(f"SELF-TEST FAILED  {name}")
     print(f"self-test: {len(failed)} of {len(cases) + 1} checks failed.")
     return 1 if failed else 0
+
+
+def git_cases(at, deny):
+    """Run the git-reading rules against a throwaway repository with known leaks."""
+    bad, good = f"me{at}private.test.de", f"1+u{at}users.noreply.github.com"
+    saved = {k: os.environ.get(k) for k in
+             ("GIT_AUTHOR_NAME", "GIT_AUTHOR_EMAIL", "GIT_COMMITTER_NAME", "GIT_COMMITTER_EMAIL")}
+
+    def ident(author_email, committer_email, committer_name="u"):
+        os.environ.update(GIT_AUTHOR_NAME="u", GIT_AUTHOR_EMAIL=author_email,
+                          GIT_COMMITTER_NAME=committer_name,
+                          GIT_COMMITTER_EMAIL=committer_email)
+
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            git(root, "init", "-q")
+            (root / "leak.md").write_text(f"contact {bad}\n")
+            git(root, "add", "leak.md")
+            ident(good, good)
+            git(root, "commit", "-q", "--no-verify", "-m", "clean")
+            ident(good, bad)
+            git(root, "commit", "-q", "--no-verify", "--allow-empty", "-m", "committer leak")
+            ident(good, good, committer_name="Canary-Term")
+            git(root, "commit", "-q", "--no-verify", "--allow-empty", "-m", "name leak")
+            message = root / "message.txt"
+            message.write_text(f"reach me: x{at}corp.io\n")
+            ident(bad, good)
+            return [
+                ("git: tracked file", rule_tracked_files(root, []), 1),
+                ("git: committer email and name", rule_commits(root, "HEAD", deny), 2),
+                ("git: new commit message and identity", rule_message_file(root, message, []), 2),
+            ]
+    except (OSError, subprocess.CalledProcessError) as e:
+        return [(f"git: could not build the sample repository ({type(e).__name__})", [], 1)]
+    finally:
+        for k, v in saved.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
 
 
 def parse_args(argv):
