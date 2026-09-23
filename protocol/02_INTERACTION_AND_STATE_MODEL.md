@@ -1,5 +1,7 @@
 # Interaction & State Model v0.2
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 ## 1. Orthogonal dimensions
 
 Do not compress all interaction into one taxonomy.

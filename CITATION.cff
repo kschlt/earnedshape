@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use or adapt this protocol or its research synthesis, please cite it as below and name the protocol version you used."
+title: "earnedshape"
+abstract: "An experimental, tool-agnostic protocol for human–AI product discovery: explicit hypothesis and decision states, human decision rights, progressive commitment and shared language, grounded in cited research."
+type: software
+authors:
+  - alias: kschlt
+repository-code: "https://github.com/kschlt/earnedshape"
+license:
+  - MIT
+  - CC-BY-4.0
+version: "0.2"
+keywords:
+  - human-ai-collaboration
+  - human-in-the-loop
+  - methodology
+  - product-discovery

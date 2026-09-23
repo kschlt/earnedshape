@@ -1,5 +1,7 @@
 # Recording Boundaries
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 > **Owns:** what an event may never contain.
 
 The event stream is the raw material for cross-run analysis, and analysis output eventually leaves the private store as sanitized findings. Boundaries drawn at the point of *recording* are the only ones that hold; boundaries drawn at the point of publication are a promise that a tired person makes at the wrong moment.

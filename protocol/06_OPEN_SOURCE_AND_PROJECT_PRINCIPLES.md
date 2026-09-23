@@ -1,5 +1,7 @@
 # Open-Source & Project Principles v0.2
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 ## 1. Intent
 
 The future project should be suitable for public GitHub development.

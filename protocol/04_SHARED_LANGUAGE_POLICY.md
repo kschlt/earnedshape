@@ -1,5 +1,7 @@
 # Shared Conceptual Language Policy v0.2
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 ## 1. Purpose
 
 Long-running Human–AI discovery benefits from shared vocabulary.

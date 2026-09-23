@@ -1,5 +1,7 @@
 # Decisions & Open Questions — v0.2
 
+> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+
 ## A. Current protocol decisions
 
 ### D-01 — The asset is a versioned protocol, not a single prompt
