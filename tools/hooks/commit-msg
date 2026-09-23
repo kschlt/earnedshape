@@ -1,0 +1,10 @@
+#!/bin/sh
+# Blocks a commit whose message or author/committer identity would put a
+# private address (or, with a local deny file, a private name) into the
+# public history. Enable with: git config core.hooksPath tools/hooks
+root=$(git rev-parse --show-toplevel) || exit 1
+deny=${PUBLIC_GUARD_DENY:-$root/.aos/public-deny.txt}
+if [ -f "$deny" ]; then
+  exec python3 "$root/tools/public_guard.py" "$root" --message-file "$1" --deny-file "$deny"
+fi
+exec python3 "$root/tools/public_guard.py" "$root" --message-file "$1"

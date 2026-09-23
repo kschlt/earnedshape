@@ -9,8 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # the public-history guard reads every commit
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Boundary lint
         run: python3 tools/boundary_lint.py .
+      - name: Public-history guard self-test
+        run: python3 tools/public_guard.py --self-test
+      - name: Public-history guard
+        run: python3 tools/public_guard.py . --commits HEAD
