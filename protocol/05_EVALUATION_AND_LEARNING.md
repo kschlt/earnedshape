@@ -166,7 +166,7 @@ pre-registered predictions
 
 ## 9. Keep / Investigate / Revert
 
-Rules over the pre-registered predictions of §2, not over a cross-run comparison. Both gates of §2 must hold for **Keep**.
+Rules over the pre-registered predictions of §2, not over a cross-run comparison. Both gates of §2 must hold for **Keep**. When more than one rule fits, **Revert** takes precedence over **Investigate**, and **Investigate** over **Keep**.
 
 ### Keep
 The predicted observable appeared, the falsification criterion was not met, and the always-on measures (§3) showed no material defect: no cold-start blocker, the sampled decisions explainable, no systematic state-integrity defect.
