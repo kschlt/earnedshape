@@ -42,7 +42,7 @@ It assumes one human, one AI, and a discovery that ends in a handoff. Teams, mul
 | `protocol/` | the specification, technology-independent, including what a run must emit to be checkable at all |
 | `capabilities/` | what an adapter would have to do, and how each capability is evaluated |
 | `research/` | the synthesis, including a standing section for evidence **against** the premise |
-| `tools/` | the lint that keeps the protocol layer vendor-free |
+| `tools/` | the lint that keeps the protocol layer vendor-free, and the guard that keeps private addresses out of the public history |
 | `examples/` | one real commitment and one overruled challenge, recorded in the protocol's shape |
 | `docs/review/` | the adversarial review of v0.2 and what happened to each of its change proposals |
 
