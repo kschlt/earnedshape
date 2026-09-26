@@ -23,7 +23,7 @@ A protocol that forces the two apart:
 - **The commitment act** — a commitment exists only with its rejected alternative, its rationale, and the condition under which it should be reopened. Anything else is a draft, however confident it sounds.
 - **Decision rights** — what the AI may do alone, what it may draft, what it may only advise on, and what stays with the human.
 - **Meaning before commitment** — a term the AI coins starts as a candidate. Fluent vocabulary is not shared understanding until it has been tested against cases.
-- **Challenge before convergence** — a model is not ready to commit to until it has survived a deliberate attempt to break it. (Accepted after review; the protocol text follows in v0.2.1.)
+- **Challenge before convergence** — a model is not ready to commit to until it has survived a deliberate attempt to break it.
 
 The governing rule is inverted from most AI tooling: it optimises for the **next valuable human contribution**, not for the completeness of the AI's answer.
 
@@ -74,10 +74,10 @@ The study closest to this protocol's target task — LLM support for problem fra
 
 > earnedshape is a bet that the **design of the interaction** — not the presence of the AI — decides the outcome. The bet is plausible, unproven, and the project is built so that it can lose.
 
-Every source the research synthesis relies on is listed and checked in [`research/REFERENCES.md`](research/REFERENCES.md), including where the support is thinner than the wording. Open findings against this baseline, including two reported by the project's own lint against its own protocol, are in [`docs/known-findings.md`](docs/known-findings.md).
+Every source the research synthesis relies on is listed and checked in [`research/REFERENCES.md`](research/REFERENCES.md), including where the support is thinner than the wording. Open findings against this baseline, including one reported by the project's own lint against its own protocol, are in [`docs/known-findings.md`](docs/known-findings.md).
 
 ## Contributing
 
 The scarcest contribution is evidence, not features — especially a discovery where the protocol cost more than it returned. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-Prose is CC BY 4.0, code is MIT ([`docs/licensing.md`](docs/licensing.md)). Protocol `v0.2`; protocol and adapter maturity are versioned separately. "Human–AI Discovery Protocol", still the heading of [`protocol/01_PROTOCOL_V0.2.md`](protocol/01_PROTOCOL_V0.2.md), is the earlier working title; the protocol is now called earnedshape.
+Prose is CC BY 4.0, code is MIT ([`docs/licensing.md`](docs/licensing.md)). Protocol `v0.2.1`; protocol and adapter maturity are versioned separately. "Human–AI Discovery Protocol", still the heading of [`protocol/01_PROTOCOL_V0.2.md`](protocol/01_PROTOCOL_V0.2.md), is the earlier working title; the protocol is now called earnedshape.

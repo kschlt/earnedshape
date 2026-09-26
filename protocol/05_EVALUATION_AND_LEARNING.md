@@ -1,6 +1,6 @@
-# Evaluation & Learning Protocol v0.2
+# Evaluation & Learning Protocol v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## 1. Principle
 
@@ -19,35 +19,42 @@ Do not optimize one composite score.
 
 ---
 
-## 2. Quality gates + Pareto comparison
+## 2. Primary instrument: pre-registered predictions
 
-### Gate 1
+Evidence arrives one case at a time. At n=1 there is no population to compare against, so a run-level metric dashboard cannot be the primary instrument. Before each case, pre-register:
+
+- **hypotheses** — at most five per case;
+- **predicted observable** — what the run should show if the hypothesis holds;
+- **falsification criterion** — what the run would show if it does not.
+
+### Quality gates
+
+#### Gate 1
 Discovery/handoff quality must remain acceptable.
 
-### Gate 2
+#### Gate 2
 Human understanding/agency must not materially deteriorate.
 
-Then compare:
-- state integrity;
-- convergence;
-- workload;
-- active human time;
-- process overhead.
+The two gates still apply to every case. Cross-run Pareto comparison of state integrity, convergence, workload, active human time and process overhead becomes possible once several comparable cases exist; until then it is a diagnostic, not the verdict.
 
 A faster protocol is not better if it produces more product rediscovery or weaker human ownership.
 
 ---
 
-## 3. Core run-level signals
+## 3. Always-on measures and optional diagnostics
+
+Three measures are cheap enough to take on every run, whatever was pre-registered:
 
 ### Cold-Start Handoff Blockers
 Can a fresh implementation context proceed using only the final discovery baseline?
 
 ### Decision Explainability Coverage
-Can the human explain consequential decisions, alternatives, trade-offs and uncertainty without the original AI?
+Can the human explain consequential decisions, alternatives, trade-offs and uncertainty without the original AI? Sample three consequential decisions per run.
 
 ### State-Integrity Defects
-Lost decisions, contradictions, stale assumptions, missing provenance/status.
+Lost decisions, contradictions, stale assumptions, missing provenance/status — derived from the trace, not from recollection.
+
+The signals below form an **optional diagnostic catalogue**. Use one when a pre-registered hypothesis needs it; none of them is required.
 
 ### Useful Breadth before Commitment
 Materially distinct frames/solution mechanisms considered before high-impact commitment.
@@ -144,7 +151,8 @@ Decision rule:
 ## 8. Learning loop
 
 ```text
-real run
+pre-registered predictions
+→ real run
 → mostly automatic measurement
 → short AAR
 → protocol hypothesis
@@ -158,14 +166,16 @@ real run
 
 ## 9. Keep / Investigate / Revert
 
+Rules over the pre-registered predictions of §2, not over a cross-run comparison. Both gates of §2 must hold for **Keep**. When more than one rule fits, **Revert** takes precedence over **Investigate**, and **Investigate** over **Keep**.
+
 ### Keep
-Quality stable/improving; agency stable; defects/effort improve.
+The predicted observable appeared, the falsification criterion was not met, and the always-on measures (§3) showed no material defect: no cold-start blocker, the sampled decisions explainable, no systematic state-integrity defect.
 
 ### Investigate
-Efficiency improves but breadth, understanding, defective-AI resistance or semantic consistency declines.
+The prediction held, but an always-on measure showed a material defect that does not fail a gate of §2, or a diagnostic used for this hypothesis — for example Useful Breadth (§3) or a shared-language diagnostic (§4) — pointed the other way. Also Investigate when the predicted observable did not appear but the falsification criterion was not met either.
 
 ### Revert
-Major blockers, discovery reopenings, understanding loss or systematic state/concept defects increase.
+The falsification criterion was met, or a gate of §2 failed: major handoff blockers, discovery reopenings, understanding loss or systematic state/concept defects.
 
 ---
 
@@ -212,9 +222,34 @@ Preferably instrument it **before** the discovery begins:
 - protocol version;
 - model/harness version;
 - active state mechanism;
-- selected hypotheses;
+- pre-registered hypotheses, predicted observables and falsification criteria (§2);
 - lightweight telemetry;
 - AAR;
 - planned cold-start handoff test.
 
 The goal is to move from retrospective inference toward prospective evidence.
+
+---
+
+## 12. Evidence strength: one scale, two columns
+
+Evidence records use one vocabulary for strength, and keep apart two things that a single column conflates. Older evidence ledgers keep their original labels and get the second column added (below).
+
+### Observation clarity
+How clearly was this seen in this case?
+
+- `clear` — directly observed and recorded;
+- `partial` — observed, but incompletely or only in part of the case;
+- `inferred` — reconstructed after the fact.
+
+### Evidential weight
+What does it license for the protocol?
+
+- `strong` — replicated, or several independent studies;
+- `moderate` — one independent study, or consistent support from several weaker sources;
+- `weak` — practitioner literature, a single dependent or self-authored case, or the project's own inference;
+- `contested` — the evidence points in different directions.
+
+Observation clarity never raises evidential weight: a clearly observed pattern in one self-authored, dependent case is still `weak` evidence for the protocol.
+
+Existing evidence ledgers are not rewritten to fit. The second column is **added**, with a dated note, and the original judgements stay as they were recorded.

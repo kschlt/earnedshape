@@ -1,6 +1,6 @@
 # Recording Boundaries
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 > **Owns:** what an event may never contain.
 

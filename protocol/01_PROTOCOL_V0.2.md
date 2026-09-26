@@ -1,6 +1,6 @@
-# Human–AI Discovery Protocol v0.2
+# Human–AI Discovery Protocol v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## 1. Objective
 
@@ -18,6 +18,21 @@ The protocol supports a human working with AI from an ambiguous starting point t
 - an implementation-ready discovery baseline.
 
 Implementation itself is a separate work mode.
+
+### Declared scope
+
+The protocol assumes one configuration:
+
+> **one human, one AI, single-threaded discovery, terminating in a handoff to a separate implementation context.**
+
+Everything in this protocol is written for that configuration and its evidence comes from it. Known untested extensions:
+
+- teams;
+- multiple stakeholders;
+- discovery inside an existing system;
+- continuous discovery→delivery.
+
+Evidence imported from multi-party settings is a transfer into this configuration and should be named as one, not read as direct support.
 
 ---
 
@@ -55,7 +70,7 @@ Human engagement should remain deliberate where the process depends on:
 
 > **AI may externalize tentative structure early, but a useful proposal must remain distinguishable from an accepted model commitment.**
 
-This principle applies across the discovery:
+This is the protocol's one tentativeness ladder. It applies across the discovery, with one typed instantiation per kind of object:
 
 ### Frames
 `possible frame → working frame → accepted frame for current horizon`
@@ -79,6 +94,12 @@ plausible abstraction
 ```
 
 Fluency is not commitment.
+
+One presentation rule governs every instantiation:
+
+> **Render status honestly: exploratory structure must not carry convergence rhetoric.**
+
+§6 is guidance on applying that rule; the decision/commitment and shared-language dimensions of `02` §7 are the state encoding of the same ladder. Neither is a separate device.
 
 ---
 
@@ -165,6 +186,8 @@ AI may recommend and challenge. It must not silently commit on the human's behal
 
 ## 5. Discovery modes
 
+A mode names the **dominant learning objective of the moment**, never a phase. Problem and solution co-evolve (§7), so mode switches are expected many times in a session.
+
 ### `PROBLEM_EXPLORATION`
 
 Goal:
@@ -220,6 +243,8 @@ Do not silently convert recommendation into decision or working language into im
 ---
 
 ## 6. Structure for exploration vs structure for convergence
+
+*Guidance under §3's presentation rule, not a separate device.*
 
 AI structure is useful in two different ways.
 
@@ -317,6 +342,13 @@ The AI should distinguish:
 
 See `04_SHARED_LANGUAGE_POLICY.md`.
 
+### Information-loss check before normalization
+
+Preserving source expressions (`04` §4) is one instance of a general rule. Whenever source-grounded information is about to be irreversibly normalized — merged, summarised, mapped onto a schema, renamed or discarded — first record:
+
+- what is being discarded;
+- what it would cost to reconstruct it later.
+
 ---
 
 ## 10. Research behavior
@@ -363,6 +395,14 @@ When importing a prior framework, product or method:
 
 A useful analogy may still become a fixation source if its operating assumptions are silently imported.
 
+### Reuse check before architecture
+
+The Analogy Boundary Check covers borrowed *ideas*. Borrowed *components* need their own gate, at the point of decision rather than at the end:
+
+> **Does the critical part already exist externally, and does it actually work?**
+
+If the answer is uncertain, spike before designing around it (§13, review typology). §14's "material external contracts are verified or deliberately deferred" is the readiness check that follows; it does not replace this gate.
+
 ---
 
 ## 12. Divergence rules
@@ -377,6 +417,15 @@ During deliberate divergence:
 - expose competing models, not synonym lists;
 - compare before ranking.
 
+### Counterexamples
+
+Classify every counterexample when it arrives:
+
+- **local** — the model survives with a bounded fix;
+- **structural** — the model's frame, boundaries or core concepts have to change.
+
+Counterexample work is **saturated** when new counterexamples cause mostly local changes.
+
 ---
 
 ## 13. Convergence and commitment
@@ -389,11 +438,50 @@ Convergence is justified when:
 - critical assumptions were tested or explicitly accepted;
 - high-impact terminology has enough shared meaning for current decisions;
 - further exploration has diminishing expected information value;
-- uncertainty remains visible.
+- uncertainty remains visible;
+- the current model has survived at least one deliberate attempt to break it, by a party or context independent of the pair that built it.
 
 A useful sequence:
 
 `compare → expose uncertainty → challenge → decide → commit`
+
+### Review typology
+
+Four kinds of review, each answering a different question:
+
+- **exploration review** — what perspective is missing?
+- **adversarial review** — where does the model break?
+- **verification review** — are the named blockers actually closed?
+- **spike** — how does the external world actually behave?
+
+The challenge condition above is an adversarial review. §15 is the release instance of the same mechanism, not a separate one.
+
+### When to review
+
+Run the adversarial review when the model is **coherent, concrete enough to attack, and still cheap to change**. Waiting until release is later, easier to skip, and makes every finding more expensive. Whether this timing actually beats a pre-release review is an open question (`07` P-15, `HYP-019`).
+
+### Closing the review loop
+
+A review is not finished when its findings are written down. The return leg:
+
+1. fix only the named blockers;
+2. record a resolution log: each blocker, what was done, or why it stays open;
+3. run a narrow **verification review** that checks those blockers and nothing else;
+4. end with a verdict: **ready** or **not ready**.
+
+The verification pass must not reopen the product. A second review that brainstorms new directions is a new exploration, and should be named as one.
+
+### Stop signal
+
+A discovery can keep running while producing nothing. Check for these symptoms during a session, not only afterwards:
+
+- new turns mainly add hypothetical future features;
+- options are debated that can only be decided in code;
+- settled decisions are restated;
+- artifacts are re-sorted rather than changed;
+- no new evidence and no new decisions appear.
+
+When they dominate, stop. `05` §3's No-New-Evidence Reopenings measures the same failure after the fact, which is too late to act on.
 
 ---
 
@@ -419,6 +507,8 @@ Readiness means:
 ---
 
 ## 15. Whole-baseline review before stable/public release
+
+This is the release instance of the adversarial review in §13. The review typology and the return leg there apply here too; this review does not replace the earlier one §13 requires.
 
 Before treating a protocol/discovery baseline as stable for public release:
 

@@ -1,15 +1,17 @@
-# Interaction & State Model v0.2
+# Interaction & State Model v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## 1. Orthogonal dimensions
 
 Do not compress all interaction into one taxonomy.
 
-### Discovery Mode — Where are we?
+### Discovery Mode — What is the dominant learning objective right now?
 - `PROBLEM_EXPLORATION`
 - `SOLUTION_EXPLORATION`
 - `CONVERGENCE`
+
+A mode is the dominant learning objective of the moment, not a phase (`01` §5). Expect many switches per session.
 
 ### Interaction Move — What cognitive move is useful?
 - `ELICIT`
@@ -264,7 +266,7 @@ This is a semantic candidate, not a fixed serialization contract.
 
 ## 7. Three distinct status dimensions
 
-Do not confuse them.
+Do not confuse them. The decision/commitment and shared-language dimensions are the state encoding of the Progressive Commitment ladder (`01` §3), not a separate mechanism.
 
 ### Epistemic status
 - Evidence

@@ -9,7 +9,7 @@ repository-code: "https://github.com/kschlt/earnedshape"
 license:
   - MIT
   - CC-BY-4.0
-version: "0.2"
+version: "0.2.1"
 keywords:
   - human-ai-collaboration
   - human-in-the-loop

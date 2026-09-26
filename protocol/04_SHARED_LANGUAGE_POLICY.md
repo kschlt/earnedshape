@@ -1,6 +1,6 @@
-# Shared Conceptual Language Policy v0.2
+# Shared Conceptual Language Policy v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## 1. Purpose
 
@@ -65,6 +65,8 @@ Useful source material may include:
 Source language is evidence about how the problem is currently understood.
 
 It is not automatically the final canonical vocabulary.
+
+This section is the terminology instance of the general information-loss check before normalization (`01` §9).
 
 ---
 

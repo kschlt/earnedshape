@@ -32,6 +32,7 @@ Three separate questions per cell, never collapsed:
 | CAP-13 probe + debrief | ext | enf | ? | ? | ? | ? | ? | ? |
 | CAP-14 independent position | ext | enf | ? | ? | ? | ? | ? | ? |
 | CAP-15 analogy record | ext | enf | ? | ? | ? | ? | ? | ? |
+| CAP-16 information-loss gate | ext | enf | ? | ? | ? | ? | ? | ? |
 
 `CC` = Claude Code · `GPT` = a ChatGPT surface, which one to be decided.
 

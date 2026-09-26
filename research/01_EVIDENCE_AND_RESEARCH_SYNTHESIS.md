@@ -24,6 +24,8 @@ The current baseline is informed by:
 
 None of these alone validates the full protocol.
 
+Strength labels in this file predate the one-scale rule of [`protocol/05`](../protocol/05_EVALUATION_AND_LEARNING.md) §12 and are kept as written, not mapped onto that scale. [`docs/known-findings.md`](../docs/known-findings.md) (KF-3) names the clearest over-statements, and [`REFERENCES.md`](REFERENCES.md) lists them all.
+
 ---
 
 ## 2. Strongly supported directions

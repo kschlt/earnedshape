@@ -59,7 +59,7 @@
 
 ### CAP-05 · Deferred decision register
 **class** enforcement · **depends on** CAP-01
-**derives from** protocol §14, `07_DECISIONS_AND_OPEN_QUESTIONS` §B
+**derives from** protocol §14, the deferred-decision register (`07_DECISIONS_AND_OPEN_QUESTIONS` §B up to v0.2, now [`docs/technical-decisions.md`](../docs/technical-decisions.md))
 **required** A deliberately deferred question is recorded with its reason and the point at which it should be decided, and remains retrievable until resolved.
 **must emit** `deferral.recorded`, `deferral.resolved`
 **eval L1** Deferrals visible in the transcript but absent from the register; resolved questions never closed.
@@ -99,7 +99,7 @@
 
 ### CAP-10 · Adversarial challenge before convergence
 **class** enforcement · **depends on** CAP-06
-**derives from** change proposal CP-01; Case 01 Phase 9, G6, L4, M-03; Case 02 E-02-20
+**derives from** change proposals CP-01, CP-16, CP-20; protocol §13; Case 01 Phase 9, G6, L4, M-03; Case 02 E-02-20
 **required** Before a high-impact commitment, the current model has survived one deliberate attempt to break it, by a party or context independent of the pair that built it. Findings are recorded as challenges; a narrow verification pass confirms the named blockers are closed.
 **must emit** `adversarial_review.completed`, plus `challenge.raised` per finding
 **eval L1** Commitments made with no preceding review event; reviews with no recorded findings (a review that finds nothing is usually a review that did not happen).
@@ -167,21 +167,25 @@
 **falsified by** Records are produced and no import error is ever caught by one.
 **note** The protocol does not currently apply this to its own imports (finding F-18). The capability should be exercised on those four first — the cheapest possible test, on material already at hand. Done by hand as change proposal CP-09: [`research/analogy-records.md`](../research/analogy-records.md) — each of the four records produced a finding, none of them cosmetic.
 
+### CAP-16 · Information-loss gate
+**class** enforcement · **depends on** CAP-01
+**derives from** protocol §9 (information-loss check before normalization), change proposal CP-18; `04_SHARED_LANGUAGE_POLICY` §4; Case 01 G3, AP-05, L3, L7, M-05
+**required** Before source-grounded information is irreversibly normalized — merged, summarised, mapped onto a schema, renamed or discarded — a record states what is being discarded and what reconstructing it would cost.
+**must emit** `normalization.recorded`
+**eval L1** Irreversible normalizations of source material with no record.
+**eval L2** Whether information later found missing had been recorded as discarded, and whether its recorded reconstruction cost was realistic.
+**falsified by** Records are produced and no discarded information is ever needed again, while the recording cost is visible.
+
 ---
 
 ## Reserved
 
-An identifier is allocated the moment a proposal depends on it, so that it cannot be reused while the proposal is open. A reservation is not a specification.
-
-### CAP-16 · Information-loss gate
-**status** reserved, not specified · **class** enforcement · **from** change proposal CP-18
-Before an irreversible normalization, record what source-grounded information is being discarded and what reconstructing it would cost. v0.2 has this only for terminology; Case 01 identified the general form as transferable to any system that ingests and transforms external information.
-**would emit** `normalization.recorded {discarded, reconstruction_cost}`
+An identifier is allocated the moment a proposal depends on it, so that it cannot be reused while the proposal is open. A reservation is not a specification. No identifier is currently reserved.
 
 ---
 
 ## What is deliberately absent
 
 - **Adaptive routing / the five-factor router.** Untested as a router, and there is no event that would show it fired. Adding a capability for it now would manufacture the appearance of a mechanism.
-- **Mode tracking.** The mode taxonomy is under an open change proposal (CP-02); building a capability on a taxonomy that may be renamed is premature.
+- **Mode tracking.** CP-02 was applied in v0.2.1 without renaming: a mode names the dominant learning objective of the moment, not a phase. Nothing in the catalogue depends on tracking it, so no capability is defined.
 - **Turn economics.** Depends entirely on whether `turn.recorded` is reachable. Phase 1 decides whether this is a capability or a demoted hypothesis.

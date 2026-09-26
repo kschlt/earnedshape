@@ -1,6 +1,6 @@
 # Fidelity Levels
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 > **Owns:** how well a run was observed, and which comparisons that permits.
 

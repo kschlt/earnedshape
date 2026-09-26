@@ -2,7 +2,7 @@
 
 > **Published record of change proposal CP-11** (see [`docs/review/disposition.md`](../docs/review/disposition.md)). Status unchanged: a proposal; nothing in `protocol/` has been renamed yet. The legacy IDs in the fifth column come from the two unpublished evidence cases and the protocol files; [`docs/provenance.md`](../docs/provenance.md) explains them. `phase0/capabilities/catalogue.md` is now [`capabilities/catalogue.md`](../capabilities/catalogue.md).
 
-> **Executes:** the second half of change proposal CP-11, addressing the ID sprawl recorded in `09` §2.2: the same claims currently carry different identifiers in five places — `H-01..H-12` (Case 02 §15), `H-SL-01` (Case 02A), `E1..E10` (`protocol/05` §10), `P-01..P-14` / `E-01..E-08` / `T-01..T-13` (`protocol/07`; *added on publication:* `T-11..T-13` were proposed in the adversarial review), and `M-01..M-12` (Case 01). A reader cannot tell whether two IDs are one claim.
+> **Executes:** the second half of change proposal CP-11, addressing the ID sprawl recorded in `09` §2.2: the same claims currently carry different identifiers in five places — `H-01..H-12` (Case 02 §15), `H-SL-01` (Case 02A), `E1..E10` (`protocol/05` §10), `P-01..P-14` / `E-01..E-08` / `T-01..T-13` (`protocol/07`; *added on publication:* `T-11..T-13` were proposed in the adversarial review), and `M-01..M-12` (Case 01). A reader cannot tell whether two IDs are one claim. *(As of v0.2. In v0.2.1, `P-15` was added and `T-01..T-10` moved to [`docs/technical-decisions.md`](../docs/technical-decisions.md).)*
 > **Status:** proposal. Nothing renamed in `protocol/` yet.
 
 ## Structure
@@ -37,15 +37,15 @@ The `evidence` column is the honest one: it says what the claim actually rests o
 | HYP-016 | The human's counterexamples are worth more than the human's solutions | **decided without test** | Case 01 hypothesis, promoted in v0.2 | M-07 | — | reopen? see note |
 | HYP-017 | An explicit decision horizon reduces overdesign | **decided without test** | Case 01 hypothesis, promoted | M-08 | CAP-05 | reopen? see note |
 | HYP-018 | Artifact version churn degrades discovery past a point | **decided without test** | Case 01 hypothesis, promoted | M-10 | — | reopen? see note |
-| HYP-019 | Adversarial review is most valuable while the model is still cheap to change | hypothesis | **dropped from v0.2** | M-02, G6 | CAP-10 | yes — CP-20 |
-| HYP-020 | Broad falsification then narrow verification converges better than one large review | hypothesis | **dropped from v0.2** | M-03, M7, EV-4 | CAP-10 | yes — CP-16 |
-| HYP-021 | Real counterexamples produce better models than feature brainstorming | hypothesis | **dropped from v0.2** | M-04 | — | yes — CP-21 |
-| HYP-022 | Source / canonical / derived separation is a generalizable AI-discovery pattern | hypothesis | **dropped from v0.2** | M-05, G3, L3, L7 | proposed CAP-16 | yes — CP-18 |
-| HYP-023 | A future-readiness check prevents irreversible information loss | hypothesis | **dropped from v0.2** | M-06, AP-05 | proposed CAP-16 | yes — CP-18 |
-| HYP-024 | An in-session halt heuristic prevents unproductive continuation | hypothesis | **dropped from v0.2** | SC-3, AP-09 | — | yes — CP-17 |
+| HYP-019 | Adversarial review is most valuable while the model is still cheap to change | hypothesis | **dropped from v0.2**; back in the protocol text in v0.2.1 (CP-20), untested | M-02, G6 | CAP-10 | yes — CP-20 |
+| HYP-020 | Broad falsification then narrow verification converges better than one large review | hypothesis | **dropped from v0.2**; back in the protocol text in v0.2.1 (CP-16), untested | M-03, M7, EV-4 | CAP-10 | yes — CP-16 |
+| HYP-021 | Real counterexamples produce better models than feature brainstorming | hypothesis | **dropped from v0.2**; back in the protocol text in v0.2.1 (CP-21), untested | M-04 | — | yes — CP-21 |
+| HYP-022 | Source / canonical / derived separation is a generalizable AI-discovery pattern | hypothesis | **dropped from v0.2**; back in the protocol text in v0.2.1 (CP-18), untested | M-05, G3, L3, L7 | CAP-16 | yes — CP-18 |
+| HYP-023 | A future-readiness check prevents irreversible information loss | hypothesis | **dropped from v0.2**; back in the protocol text in v0.2.1 (CP-18), untested | M-06, AP-05 | CAP-16 | yes — CP-18 |
+| HYP-024 | An in-session halt heuristic prevents unproductive continuation | hypothesis | **dropped from v0.2**; back in the protocol text in v0.2.1 (CP-17), untested | SC-3, AP-09 | — | yes — CP-17 |
 | HYP-025 | Recorded dissent predicts later reopenings | hypothesis | new, from CP-05 | — | CAP-06 | yes — the one predictive test available at n=1 |
 
-Open **questions** (`P-01..P-14`, `E-01..E-08`) and deferred **technical decisions** (`T-01..T-13`: `T-01..T-10` in `protocol/07`, `T-11..T-13` proposed in the adversarial review) keep their existing IDs and are not folded in: they are not claims, and merging them would recreate the confusion this register removes. `07` should link here rather than restate.
+Open **questions** (`P-01..P-15`, `E-01..E-08`) and deferred **technical decisions** (`T-01..T-13`: `T-01..T-10` in [`docs/technical-decisions.md`](../docs/technical-decisions.md), section B of `protocol/07` up to v0.2; `T-11..T-13` proposed in the adversarial review) keep their existing IDs and are not folded in: they are not claims, and merging them would recreate the confusion this register removes. `07` should link here rather than restate.
 
 ## Three findings from building it
 

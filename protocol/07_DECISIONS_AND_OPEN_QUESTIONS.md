@@ -1,6 +1,6 @@
-# Decisions & Open Questions — v0.2
+# Decisions & Open Questions — v0.2.1
 
-> **Status:** experimental, protocol v0.2. Rules may still change between versions.
+> **Status:** experimental, protocol v0.2.1. Rules may still change between versions.
 
 ## A. Current protocol decisions
 
@@ -81,30 +81,7 @@ Tentative structure can appear early across frames, concepts, terms and solution
 
 ---
 
-## B. Deferred technical decisions
-
-### T-01 — Final project/repository name
-
-### T-02 — Monorepo vs multiple repos
-
-### T-03 — First reference harness
-Claude Code remains a strong candidate, not a normative commitment.
-
-### T-04 — State serialization
-
-### T-05 — Skill/hook/agent architecture
-
-### T-06 — Review/handoff UI
-
-### T-07 — Automated evaluator architecture
-
-### T-08 — Public release workflow
-
-### T-09 — Concept/shared-language storage
-Separate registry vs integrated state vs implicit memory.
-
-### T-10 — Visible terminology provenance
-Whether Human/AI/External origin should be shown.
+> Former section B, the deferred technical decisions `T-01`–`T-10`, is now [`docs/technical-decisions.md`](../docs/technical-decisions.md) (change proposal CP-22): they are project decisions, not protocol semantics.
 
 ---
 
@@ -143,6 +120,9 @@ What should count as sufficient shared meaning?
 
 ### P-14 — Intentional ambiguity
 When should a concept remain explicitly unresolved?
+
+### P-15 — Review timing
+Does an adversarial review triggered when the model is coherent, concrete enough to attack and still cheap to change catch more material problems, at lower cost, than one run before release? Carried over in v0.2.1 (CP-20) from the Case 01 method, which is unpublished; the same claim is `HYP-019` in the [hypothesis register](../research/hypothesis-register.md).
 
 ---
 
