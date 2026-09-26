@@ -28,7 +28,7 @@ v0.2.1 applies the listed accepted change proposals to the protocol text. It add
 
 **Observation model.** One extended event kind, `normalization.recorded`, is added. The event vocabulary treats a new kind as a version bump, but the observation model is not yet versioned separately from the protocol, so v0.2.1 is that bump and this line is its migration note. No run has been recorded yet, so no comparability is lost.
 
-**What did not happen.** The adversarial review's own plan for v0.2.1 (its §7, W1) expected a *smaller* normative document. This consolidation is larger: CP-16 to CP-21 add mechanisms that Case 01 had and v0.2 dropped, and none of them is tested yet. CP-15 remains deferred. KF-1 and KF-3 remain open. The Core/Extended split (CP-11) is still a proposal in the catalogue, not a protocol decision. CP-03, CP-05 and CP-06 are accepted and drafted as capabilities (`CAP-14`, `CAP-06`, `CAP-04`), but their protocol-text edits are not part of v0.2.1.
+**What did not happen.** The adversarial review's own plan for v0.2.1 (its §7, W1) set a test: if v0.2.1 is longer than v0.2, the phase has failed. By that test this consolidation fails, because it is longer: CP-16 to CP-21 add mechanisms that Case 01 had and v0.2 dropped, and none of them is tested yet. CP-15 remains deferred. KF-1 and KF-3 remain open. The Core/Extended split (CP-11) is still a proposal in the catalogue, not a protocol decision. CP-03, CP-05 and CP-06 are accepted and drafted as capabilities (`CAP-14`, `CAP-06`, `CAP-04`), but their protocol-text edits are not part of v0.2.1.
 
 ---
 

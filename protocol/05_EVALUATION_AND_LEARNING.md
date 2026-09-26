@@ -172,7 +172,7 @@ Rules over the pre-registered predictions of §2, not over a cross-run compariso
 The predicted observable appeared, the falsification criterion was not met, and the always-on measures (§3) showed no material defect: no cold-start blocker, the sampled decisions explainable, no systematic state-integrity defect.
 
 ### Investigate
-The prediction held, but an always-on measure showed a material defect, or a diagnostic used for this hypothesis — for example Useful Breadth (§3) or a shared-language diagnostic (§4) — pointed the other way.
+The prediction held, but an always-on measure showed a material defect that does not fail a gate of §2, or a diagnostic used for this hypothesis — for example Useful Breadth (§3) or a shared-language diagnostic (§4) — pointed the other way. Also Investigate when the predicted observable did not appear but the falsification criterion was not met either.
 
 ### Revert
 The falsification criterion was met, or a gate of §2 failed: major handoff blockers, discovery reopenings, understanding loss or systematic state/concept defects.
